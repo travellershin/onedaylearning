@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+    <div class="controller">
+        <div class="ct_view">
+            <p class="ct_title">보이기/숨기기</p>
+            <div class="ct_view_zone">
+                <div class="checkbox checkbox--checked checkbox_html">HTML입력기</div>
+                <div class="checkbox checkbox--checked checkbox_css">CSS입력기</div>
+                <div class="checkbox checkbox--checked checkbox_result">결과화면</div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="input_wrapper html_wrapper">
+            <p>HTML 입력기</p>
+            <textarea class="editor editor_html" spellcheck="false"></textarea>
+        </div>
+        <div class="input_wrapper css_wrapper">
+            <p>CSS 입력기</p>
+            <textarea class="editor editor_css" spellcheck="false"></textarea>
+        </div>
+        <iframe id="live_viewer">
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+            </head>
+            <body>
+            </body>
+            </html>
+        </iframe>
+    </div>
+
+
+
+    <script src='./libraries/jquery.js'></script>
+    <script src="./pages/live_editor.js"></script>
+</body>
+</html>

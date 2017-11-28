@@ -1,0 +1,148 @@
+
+body{
+    color:#262e3e;
+    font-family: sans-serif;
+    font-size:15px;
+}
+
+input[type="time"]::-ms-clear {
+    display: none;
+}
+input[type="time"]::-webkit-clear-button {
+    display: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.pop_background{
+    margin:0 auto;
+    background-color:white;
+    box-sizing: border-box;
+}
+
+.h1{
+    font-size:36px;
+    letter-spacing: 0.6px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+h1,h2,h3,h4,h5,h6,p{
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.centering{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    cursor: pointer;
+    box-sizing: border-box;
+    border: solid 1px #e0e0e0;
+    padding:10px 16px;
+    font-size: 14px;
+
+
+    border-radius: 5px;
+    overflow: hidden;
+    height: 40px;
+
+    &>p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &:hover{
+        background-color: rgba(105, 105, 105, 0.025);
+    }
+    &:active{
+        background-color: rgba(105, 105, 105, 0.1);
+    }
+}
+
+.longbtn{
+    cursor: pointer;
+    box-sizing: border-box;
+    border: solid 1px #e0e0e0;
+    padding:9px 15px 9px 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 40px;
+
+    &>*{float: left;}
+    &>img{margin-right: 8px;}
+
+    &>p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &:hover{
+        background-color: rgba(105, 105, 105, 0.025);
+    }
+    &:active{
+        background-color: rgba(105, 105, 105, 0.1);
+    }
+}
+
+.input{
+    padding:9px 11px 9px 11px;
+    border: solid 1px #e0e0e0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 40px;
+
+    &>p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &_wrong{
+        box-shadow: none;
+        border: solid 1px #f54b5e;
+    }
+
+    &_wrong:focus{
+        box-shadow: none;
+        border: solid 1px #f54b5e;
+    }
+}
+
+
+.ov_hidden{
+    overflow: hidden;
+}
+.fl_left{
+    float: left;
+}
+
+.controller{
+    box-sizing: border-box;
+    padding: 12px;
+    overflow: hidden;
+}
+
+
+.checkbox{
+    cursor: pointer;
+    padding-left: 21px;
+    background-image: url("./assets/cb-uncheck.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+
+    &--checked{
+        background-image: url("./assets/cb-check.svg");
+    }
+}

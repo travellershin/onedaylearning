@@ -1,0 +1,85 @@
+.wrapper{
+    overflow: hidden;
+    height: 90vh;
+    &>*{
+        float: left;
+    }
+}
+.controller{
+    height: 10vh;
+}
+#live_viewer{
+    display: block;
+    width: 52%;
+    height: 90vh;
+    box-sizing: border-box;
+    border: none;
+    overflow: auto;
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+}
+.input_wrapper{
+    border:none;
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+    box-sizing: border-box;
+    width: 24vw;
+    height: 90vh;
+
+    &>p{
+        height: 40px;
+        border-bottom: 1px solid grey;
+        line-height: 40px;
+        text-align: center;
+    }
+}
+
+
+.editor{
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100% - 41px);
+    padding: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: auto;
+
+    &::-webkit-scrollbar-track{
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar{
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        background-color: #e0e0e0;
+    }
+}
+
+
+.ct{
+    &_title{
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    &_view{
+        float: left;
+        padding: 8px;
+        border: 1px solid #e0e0e0;
+
+        &_zone{
+            overflow: hidden;
+
+            & .checkbox{
+                float: left;
+                margin-right: 12px;
+                height: 21px;
+
+            }
+        }
+    }
+}
