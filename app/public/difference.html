@@ -9,8 +9,8 @@
 <body>
     <header class="hd">
         <h1>
-            <a class="hd_logo" href="https://onedaylearning.co.kr/" title="하루만에 웹 홈페이지로 이동">
-                <img class="hd_log_img" src="./assets/logo.svg" alt="하루만에 웹"/>
+            <a class="hd_logo" href="index.html" title="하루만에 웹 홈페이지로 이동">
+                <img class="hd_logo_img" src="./assets/logo.svg" alt="하루만에 웹"/>
             </a>
         </h1>
         <nav class="hd_nav">
@@ -19,9 +19,49 @@
                 <li><a class="hd_nav_item" href="curriculum.html">수업내용</a></li>
                 <li><a class="hd_nav_item" href="faq.html">자주하는 질문</a></li>
                 <li><a class="hd_nav_item" href="location.html">오시는 길</a></li>
+                <p class="hd_nav_apply">수강신청</p>
             </ul>
         </nav>
     </header>
+
+    <article class="difference_summary">
+        <p class="subtitle">어떤 점이 다른가요?</p>
+        <div class="difference_summary_container">
+            <div class="difference_summary_box">
+                <div class="difference_summary_liner">
+                    <p class="difference_summary_txt">오래 끄는 건 NO!</p>
+                </div>
+                <div class="difference_summary_liner">
+                    <p class="difference_summary_txt">하루 바싹 배워서 만듭니다</p>
+                </div>
+            </div>
+            <div class="difference_summary_box">
+                <div class="difference_summary_liner">
+                    <p class="difference_summary_txt">이론만 배우다 끝?</p>
+                </div>
+                <div class="difference_summary_liner">
+                    <p class="difference_summary_txt">인터넷에서 작동하게 합니다</p>
+                </div>
+            </div>
+            <div class="difference_summary_box">
+                <div class="difference_summary_liner">
+                    <p class="difference_summary_txt">뒤돌면 잊는 건 그만!</p>
+                </div>
+                <div class="difference_summary_liner">
+                    <p class="difference_summary_txt">복습용 동영상을 제공합니다</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="difference_container">
+        <p class="difference_title">하루 바싹 배워서 만듭니다</p>
+        <p class="difference_contents">HTML 태그(웹 페이지를 만드는 데 사용되는 요소)의 종류는 100개 이상. 하지만 실제 자주 사용되는 태그는 10~20% 뿐입니다. 정말 필요한 핵심만 빠르게 정복해봅시다! 컴퓨터에 능숙해야 하냐구요? 인터넷에서 날씨 검색만 할 수 있어도 충분히 따라올 수 있습니다.</p>
+        <p class="difference_title">인터넷에서 작동하게 합니다</p>
+        <p class="difference_contents">단 하루의 수업이지만, 일방적으로 이론만 가르치다가 끝나지 않습니다. 수업 시간의 절반 이상이 실습으로 구성되어 있으며, 실제로 코딩한 결과물을 인터넷에 올려 작동하게 합니다. 주소를 입력해 내가 만든 웹 페이지에 누구나 접속할 수 있습니다.</p>
+        <p class="difference_title">복습용 동영상을 제공합니다</p>
+        <p class="difference_contents">돌아서면 잊어버리지 않을까 걱정되시나요? 마음껏 복습할 수 있도록 복습용 교재 뿐만 아니라 내용이 잘 요약된 카드, 거기에 동영상 강의까지 풍부하게 제공합니다.</p>
+    </article>
 
     <footer class="ft">
         <div class="ft_wrapper">
@@ -43,5 +83,30 @@
             </div>
         </div>
     </footer>
+
+    <div class="lightbox displayNone">
+        <div class="index_cannotApply ICA">
+            <img class="ICA_close" src="./assets/icon-close.svg"/>
+            <p class="ICA_title">수강신청 기간이 아닙니다.</p>
+            <p class="ICA_txt">아래 정보를 입력해주세요. 수강신청 기간이 되면 20% 할인 쿠폰과 함께 신청기간 알림 문자를 드리겠습니다.</p>
+            <div class="ICA_input_container">
+                <p class="ICA_input_title">이름</p>
+                <input class="ICA_input_name">
+                <p class="ICA_input_title">전화번호 (숫자로만 입력)</p>
+                <input class="ICA_input_tel">
+            </div>
+            <p class="ICA_footnote">*입력하신 정보는 수강신청 알림 발송 이외의 정보로는 절대 활용되지 않습니다.</p>
+            <div class="ICA_submit">확인</div>
+        </div>
+        <div class="index_preApplySuccess PAC displayNone">
+            <p class="ICA_title">감사합니다</p>
+            <p class="ICA_txt">수강신청 알림이 정상적으로 신청되었습니다.</p>
+            <p class="PAC_close">닫기</p>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./scripts/modules/apply.js"></script>
 </body>
 </html>

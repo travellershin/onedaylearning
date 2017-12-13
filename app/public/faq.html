@@ -9,8 +9,8 @@
 <body>
     <header class="hd">
         <h1>
-            <a class="hd_logo" href="https://onedaylearning.co.kr/" title="하루만에 웹 홈페이지로 이동">
-                <img class="hd_log_img" src="./assets/logo.svg" alt="하루만에 웹"/>
+            <a class="hd_logo"  href="index.html" title="하루만에 웹 홈페이지로 이동">
+                <img class="hd_logo_img" src="./assets/logo.svg" alt="하루만에 웹"/>
             </a>
         </h1>
         <nav class="hd_nav">
@@ -19,6 +19,7 @@
                 <li><a class="hd_nav_item" href="curriculum.html">수업내용</a></li>
                 <li><a class="hd_nav_item hd_nav_item--active" href="faq.html">자주하는 질문</a></li>
                 <li><a class="hd_nav_item" href="location.html">오시는 길</a></li>
+                <p class="hd_nav_apply">수강신청</p>
             </ul>
         </nav>
     </header>
@@ -37,7 +38,7 @@
         <div class="faq">
             <div class="faq_q">
                 <p class="faq_simbol">Q</p>
-                <p class="faq_q_txt">하루만에 웹에 대해 모든 것을 다 배우나요?</p>
+                <p class="faq_q_txt">하루만에 웹에 대한 모든 것을 다 배우나요?</p>
             </div>
             <div class="faq_a">
                 <p class="faq_simbol">A</p>
@@ -88,5 +89,30 @@
             </div>
         </div>
     </footer>
+
+    <div class="lightbox displayNone">
+        <div class="index_cannotApply ICA">
+            <img class="ICA_close" src="./assets/icon-close.svg"/>
+            <p class="ICA_title">수강신청 기간이 아닙니다.</p>
+            <p class="ICA_txt">아래 정보를 입력해주세요. 수강신청 기간이 되면 20% 할인 쿠폰과 함께 신청기간 알림 문자를 드리겠습니다.</p>
+            <div class="ICA_input_container">
+                <p class="ICA_input_title">이름</p>
+                <input class="ICA_input_name">
+                <p class="ICA_input_title">전화번호 (숫자로만 입력)</p>
+                <input class="ICA_input_tel">
+            </div>
+            <p class="ICA_footnote">*입력하신 정보는 수강신청 알림 발송 이외의 정보로는 절대 활용되지 않습니다.</p>
+            <div class="ICA_submit">확인</div>
+        </div>
+        <div class="index_preApplySuccess PAC displayNone">
+            <p class="ICA_title">감사합니다</p>
+            <p class="ICA_txt">수강신청 알림이 정상적으로 신청되었습니다.</p>
+            <p class="PAC_close">닫기</p>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./scripts/modules/apply.js"></script>
 </body>
 </html>

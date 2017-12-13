@@ -1,0 +1,55 @@
+.difference{
+
+    &_summary{
+        padding: 12px 0 70px 0;
+        background-color: #f7f7f7;
+
+        &_container{
+            display: flex;
+            width: 1024px;
+            margin: 0 auto;
+            margin-top: 40px;
+            justify-content:space-around;
+        }
+
+        &_box{
+            width: 288px;
+            height: 86px;
+        }
+        &_liner{
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+        &_txt{
+            display: inline-block;
+            border-bottom: solid 3px #102f80;
+            line-height: 40px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    }
+
+    &_container{
+        width: 720px;
+        margin: 0 auto;
+        padding: 80px 0;
+    }
+
+    &_title{
+        height: 28px;
+        font-size: 20px;
+        line-height: 1.4;
+        border-bottom: solid 3px #102f80;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 16px;
+    }
+
+    &_contents{
+        margin-bottom: 48px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1.75;
+    }
+}

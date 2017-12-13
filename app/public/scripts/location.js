@@ -1,9 +1,9 @@
 $(".location_picture").click(function(){
     $(".lightbox_img").attr("src",$(this).attr("src"));
-    $(".lightbox").removeClass("displayNone");
+    $(".lightbox_location").removeClass("displayNone");
     $("body").css("overflow","hidden");
 })
-$(".lightbox").click(function(){
-    $(".lightbox").addClass("displayNone");
+$(".lightbox_location").click(function(){
+    $(".lightbox_location").addClass("displayNone");
     $("body").css("overflow","auto");
 })

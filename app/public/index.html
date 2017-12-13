@@ -9,21 +9,36 @@
 <body>
     <header class="hd">
         <h1>
-            <a class="hd_logo" href="index.html" title="하루만에 웹 홈페이지로 이동">
-                <img class="hd_log_img" src="./assets/logo.svg" alt="하루만에 웹"/>
+            <a class="hd_logo" href="index.html" title="하루만에 웹 메인 페이지로 이동">
+                <img class="hd_logo_img" src="./assets/logo.svg" alt="하루만에 웹"/>
             </a>
         </h1>
         <nav class="hd_nav">
             <ul class="hd_nav_container">
                 <li><a class="hd_nav_item" href="difference.html">차별점</a></li>
-                <li><a class="hd_nav_item hd_nav_item--active" href="curriculum.html">수업내용</a></li>
+                <li><a class="hd_nav_item" href="curriculum.html">수업내용</a></li>
                 <li><a class="hd_nav_item" href="faq.html">자주하는 질문</a></li>
                 <li><a class="hd_nav_item" href="location.html">오시는 길</a></li>
+                <p class="hd_nav_apply">수강신청</p>
             </ul>
         </nav>
     </header>
     <div class="banner_wrapper">
         <img class="banner" src="./assets/banner0.svg" alt="왕초보 코딩탈출 하루만에 웹"/>
+        <div class="banner_arrow banner_arrow_left">
+            <img src="./assets/icon-banner-left.svg" alt="왼쪽 배너 보기"/>
+        </div>
+        <div class="banner_arrow banner_arrow_right">
+            <img src="./assets/icon-banner-right.svg" alt="오른쪽 배너 보기"/>
+        </div>
+        <div class="banner_dom">
+            <p class="banner_txt">요즘 코딩 열풍이라는데<br>책은 두껍고 학원은 부담스럽죠?<br>함께 딱 하루만 투자해보세요.</p>
+            <div class="hd_nav_apply displayNone">알림받기</div>
+        </div>
+        <div class="banner_nav">
+            <div class="banner_nav_item dot--on"></div>
+            <div class="banner_nav_item"></div>
+        </div>
     </div>
     <div class="description_wrapper">
         <div class="description_left_div">
@@ -39,8 +54,16 @@
     <div class="course_wrapper">
         <p class="subtitle">오픈예정 수업</p>
         <div class="course_container">
-            <img class="course" src="./assets/img-class-01.svg" alt="1월 6일 오픈 예정 수업"/>
-            <img class="course" src="./assets/img-class-02.svg" alt="1월 20일 오픈 예정 수업"/>
+            <div class="course">
+                <img src="./assets/img-class-01.svg" alt="1월 6일 오픈 예정 수업"/>
+                <p class="course_apply">수강신청</p>
+                <p class="course_price">15만원</p>
+            </div>
+            <div class="course">
+                <img src="./assets/img-class-02.svg" alt="1월 20일 오픈 예정 수업"/>
+                <p class="course_apply">수강신청</p>
+                <p class="course_price">15만원</p>
+            </div>
         </div>
     </div>
     <div class="recommend_wrapper">
@@ -48,47 +71,31 @@
         <div class="recommend_centerer">
             <div class="recommend_container">
                 <div class="recommend">
-                    <img class="recommend_img" />
-                    <p class="recommend_txt">비전공자, 관련 경험이 하나도 없는 사람도 단 하루의 투자로</p>
+                    <img class="recommend_img" src="./assets/img-recommend-01.svg" />
+                    <p class="recommend_txt">코딩이 무엇인지 체험해보고 싶은 코딩 알지 못하는 사람.</p>
                 </div>
                 <div class="recommend">
-                    <img class="recommend_img" />
-                    <p class="recommend_txt">비전공자, 관련 경험이 하나도 없는 사람도 단 하루의 투자로</p>
+                    <img class="recommend_img" src="./assets/img-recommend-02.svg" />
+                    <p class="recommend_txt">자신이 디자인 한 페이지를 어떻게<br>만드는지 궁금한 디자이너.</p>
                 </div>
                 <div class="recommend">
-                    <img class="recommend_img" />
-                    <p class="recommend_txt">비전공자, 관련 경험이 하나도 없는 사람도 단 하루의 투자로</p>
-                </div>
-            </div>
-        </div>
-        <div class="recommend_centerer">
-            <div class="recommend_container">
-                <div class="recommend">
-                    <img class="recommend_img" />
-                    <p class="recommend_txt">비전공자, 관련 경험이 하나도 없는 사람도 단 하루의 투자로</p>
-                </div>
-                <div class="recommend">
-                    <img class="recommend_img" />
-                    <p class="recommend_txt">비전공자, 관련 경험이 하나도 없는 사람도 단 하루의 투자로</p>
-                </div>
-                <div class="recommend">
-                    <img class="recommend_img" />
-                    <p class="recommend_txt">비전공자, 관련 경험이 하나도 없는 사람도 단 하루의 투자로</p>
+                    <img class="recommend_img" src="./assets/img-recommend-03.svg" />
+                    <p class="recommend_txt">HTML CSS 자바스크립트라는<br>단어만 들어본 IT 관련 기획자.</p>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="comment_wrapper">
         <img src="./assets/word-front.svg"/>
         <div class="comment_container">
-            <p class="comment">웹 페이지 만들기, 당연히 어려울 줄 알았는데</p>
-            <p class="comment">막상 해보니 정말 생각보다 쉽더라구요.</p>
+            <p class="comment">말은 쉽지, 코드를 보여줘</p>
+            <p class="comment">Talk is cheap. Show me the code.</p>
         </div>
-        <p class="comment_by">UX 디자이너 남○○</p>
+        <p class="comment_by">리누스 토르발스</p>
         <img src="./assets/word-back.svg"/>
         <div class="comment_nav">
             <div class="comment_nav_item dot--on"></div>
-            <div class="comment_nav_item"></div>
             <div class="comment_nav_item"></div>
         </div>
     </div>
@@ -112,5 +119,31 @@
             </div>
         </div>
     </footer>
+
+    <div class="lightbox displayNone">
+        <div class="index_cannotApply ICA">
+            <img class="ICA_close" src="./assets/icon-close.svg"/>
+            <p class="ICA_title">수강신청 기간이 아닙니다.</p>
+            <p class="ICA_txt">아래 정보를 입력해주세요. 수강신청 기간이 되면 20% 할인 쿠폰과 함께 신청기간 알림 문자를 드리겠습니다.</p>
+            <div class="ICA_input_container">
+                <p class="ICA_input_title">이름</p>
+                <input class="ICA_input_name">
+                <p class="ICA_input_title">전화번호 (숫자로만 입력)</p>
+                <input class="ICA_input_tel">
+            </div>
+            <p class="ICA_footnote">*입력하신 정보는 수강신청 알림 발송 이외의 정보로는 절대 활용되지 않습니다.</p>
+            <div class="ICA_submit">확인</div>
+        </div>
+        <div class="index_preApplySuccess PAC displayNone">
+            <p class="ICA_title">감사합니다</p>
+            <p class="ICA_txt">수강신청 알림이 정상적으로 신청되었습니다.</p>
+            <p class="PAC_close">닫기</p>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./scripts/modules/apply.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>

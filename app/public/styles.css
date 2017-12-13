@@ -144,6 +144,7 @@ h1,h2,h3,h4,h5,h6,p{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    z-index: 9999;
 }
 .lightbox_wrapper{
         width: 90%;
@@ -165,6 +166,7 @@ h1,h2,h3,h4,h5,h6,p{
         }
 .hd{
     width: 100%;
+    min-width: 800px;
     height: 72px;
     max-width: 1024px;
     margin:0 auto;
@@ -181,10 +183,13 @@ h1,h2,h3,h4,h5,h6,p{
             width: 160px;
             height: 40px;
         }
+.hd_logo_img:hover{
+                border-bottom: solid 3px #102f80;
+            }
 .hd_nav{
         float: right;
         height: 72px;
-        width: 460px;
+        width: 600px;
     }
 .hd_nav_container{
             display: -webkit-box;
@@ -214,6 +219,26 @@ h1,h2,h3,h4,h5,h6,p{
             }
 .hd_nav_item--active{
                 border-bottom: solid 3px #102f80;
+            }
+.hd_nav_apply{
+            height: 40px;
+            line-height: 40px;
+            width: 120px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin:12px 0 12px 15px;
+            border: 3px solid #102f80;
+        }
+.hd_nav_apply:hover{
+                border-bottom: solid 3px #102f80;
+                background-color: #102f80;
+                color: white;
+            }
+.hd_nav_apply:active{
+                border-bottom: solid 3px #102f80;
+                background-color: #001f70;
             }
 /* The snackbar - position it at the bottom and in the middle of the screen */
 .snackbar {
@@ -294,18 +319,183 @@ However, delay the fade out process for 2.5 seconds */
 .ft_link img{
             margin-left: 20px;
         }
-.banner_wrapper{
-    width:100%;
-    height: 440px;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background-color: #f7f7f7;
+.ICA{
+    width: 620px;
+    height: 580px;
+    background-color: white;
+    position: relative;
+    border-radius: 5px;
 }
+.ICA p{
+        font-weight: bold;
+    }
+.ICA_title{
+        margin-top: 60px;
+        width: 100%;
+        text-align: center;
+        height: 34px;
+        font-size: 30px;
+        line-height: 34px;
+    }
+.ICA_txt{
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 24px;
+        margin-bottom: 48px;
+        font-size: 20px;
+        line-height: 1.35;
+        text-align: center;
+    }
+.ICA_input_container{
+            width: 450px;
+            margin: 0 auto;
+        }
+.ICA_input_container>input{
+                width: 320px;
+                height: 40px;
+                -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                padding-left: 16px;
+                border: solid 1px #102f80;
+                margin:0 0 20px 64px;
+            }
+.ICA_input_title{
+            font-size: 16px;
+            height: 18px;
+            line-height: 18px;
+            margin:0 0 8px 65px;
+        }
+.ICA_footnote{
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+    }
+.ICA_submit{
+        width: 320px;
+        height: 60px;
+        border: solid 3px #102f80;
+        margin: 0 auto;
+        margin-top: 52px;
+        font-size: 20px;
+        line-height: 60px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+    }
+.ICA_close{
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        cursor: pointer;
+    }
+.PAC{
+    width: 620px;
+    height: 310px;
+    background-color: white;
+    border-radius: 5px;
+}
+.PAC p{
+        font-weight: bold;
+    }
+.PAC_close{
+        width: 320px;
+        height: 60px;
+        border: solid 3px #102f80;
+        margin: 0 auto;
+        margin-top: 52px;
+        font-size: 20px;
+        line-height: 60px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+    }
+.banner{
+    width: 1280px;
+    height: 440px;
+    position: absolute;
+    left: 50%;
+    margin-left: -640px;
+
+}
+.banner_dom{
+        position: absolute;
+        left: 50%;
+        margin-left:-480px;
+        top: 126px;
+        width: 382px;
+        height: 185px;
+    }
+.banner_dom .hd_nav_apply{
+            margin: 25px 0 0 0;
+        }
+.banner_txt{
+        font-size: 26px;
+        line-height: 1.46;
+        font-weight: bold;
+    }
+.banner_wrapper{
+        width:100%;
+        height: 440px;
+        overflow: hidden;
+        background-color: #f7f7f7;
+        position: relative;
+    }
+.banner_arrow{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        border-radius: 40px;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        cursor: pointer;
+    }
+.banner_arrow:hover{
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+.banner_arrow:active{
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+.banner_arrow_left{
+            left: 32px;
+            top: 200px;
+        }
+.banner_arrow_right{
+            right: 32px;
+            top: 200px;
+            -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+        }
+.banner_nav{
+        height: 12px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        left: 0;
+    }
+.banner_nav_item{
+            margin-right: 2px;
+            width: 12px;
+            height: 12px;
+            background-image: url("./assets/dot-off.svg");
+            cursor: pointer;
+        }
+.banner_nav_item:last-child{
+                margin-right:0;
+            }
 .description_wrapper{
         width: 100%;
         height: auto;
@@ -345,6 +535,7 @@ However, delay the fade out process for 2.5 seconds */
     float: left;
     width: 432px;
     height: 256px;
+    position: relative;
 }
 .course:first-child{
         margin-right:32px;
@@ -368,15 +559,49 @@ However, delay the fade out process for 2.5 seconds */
             display: block;
             content: "";
         }
+.course_apply{
+        position: absolute;
+        right: 44px;
+        bottom: 40px;
+        width: 120px;
+        height: 40px;
+        border: solid 2px #102f80;
+        font-size: 15px;
+        line-height: 40px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+    }
+.course_apply:hover{
+            -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            right: 45px;
+            bottom: 41px;
+        }
+.course_apply:active{
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            right: 44px;
+            bottom: 40px;
+        }
+.course_price{
+        position: absolute;
+        bottom:85px;
+        left: 36px;
+        font-weight: bold;
+        height: 23px;
+        font-size: 22px;
+        line-height: 23px;
+        color: #ed3995;
+    }
 .recommend{
     width: 288px;
-    height: 172px;
+    height: 100px;
     margin-right: 80px;
 }
 .recommend_img{
         width: 288px;
-        height: 100px;
-        background-color: #d8d8d8;
+        height: 28px;
         margin-bottom: 16px;
     }
 .recommend_txt{
@@ -698,15 +923,35 @@ However, delay the fade out process for 2.5 seconds */
             line-height: 1.75;
             font-weight: bold;
         }
+.location_bus{
+        position: absolute;
+        left: 722px;
+        top: 0;
+    }
 .location_map{
         width: 700px;
         height: 560px;
         float: left;
-        margin-right: 22px;
+        position: absolute;
+        z-index: 999;
     }
 .location_map_box{
             margin: 40px 0;
             overflow: hidden;
+            width: 1024px;
+            height: 560px;
+            position: relative;
+        }
+.location_map_loading{
+            position: absolute;
+            line-height: 560px;
+            width: 700px;
+            top:0;
+            left: 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 998;
         }
 .location_container{
         width: 1024px;
@@ -759,4 +1004,76 @@ However, delay the fade out process for 2.5 seconds */
         font-size: 17px;
         font-weight: bold;
         margin-bottom: 60px;
+    }
+.lightbox_location{
+    position: fixed;
+    z-index: 9999;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.difference_summary{
+        padding: 12px 0 70px 0;
+        background-color: #f7f7f7;
+    }
+.difference_summary_container{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 1024px;
+            margin: 0 auto;
+            margin-top: 40px;
+            -ms-flex-pack:distribute;
+                justify-content:space-around;
+        }
+.difference_summary_box{
+            width: 288px;
+            height: 86px;
+        }
+.difference_summary_liner{
+            overflow: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+        }
+.difference_summary_txt{
+            display: inline-block;
+            border-bottom: solid 3px #102f80;
+            line-height: 40px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+.difference_container{
+        width: 720px;
+        margin: 0 auto;
+        padding: 80px 0;
+    }
+.difference_title{
+        height: 28px;
+        font-size: 20px;
+        line-height: 1.4;
+        border-bottom: solid 3px #102f80;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 16px;
+    }
+.difference_contents{
+        margin-bottom: 48px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1.75;
     }
