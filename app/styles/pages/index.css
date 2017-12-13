@@ -1,0 +1,166 @@
+
+
+.banner_wrapper{
+    width:100%;
+    height: 440px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #f7f7f7;
+}
+
+.description{
+    &_wrapper{
+        width: 100%;
+        height: auto;
+        padding: 44px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &_left{
+        float: left;
+        height: 52px;
+        box-sizing: border-box;
+        line-height: 52px;
+        border-bottom:solid 3px #102f80;
+        font-weight: bold;
+        font-size: 28px;
+
+        &_div{
+            margin-right: 52px;
+        }
+    }
+    &_right{
+        line-height: 32px;
+        font-size: 20px;
+        font-weight: bold;
+
+        &_div{
+            margin-top: 6px;
+        }
+    }
+}
+.course{
+    float: left;
+    width: 432px;
+    height: 256px;
+    &:first-child{
+        margin-right:32px;
+    }
+
+    &_wrapper{
+        width: 100%;
+        background-color: #f7f7f7;
+        overflow: hidden;
+    }
+
+    &_container{
+        display: flex;
+        justify-content: center;
+        margin: 32px 0 60px 0;
+
+        &:after{
+            clear:both;
+            display: block;
+            content: "";
+        }
+    }
+}
+
+.recommend{
+    width: 288px;
+    height: 172px;
+    margin-right: 80px;
+
+    &_img{
+        width: 288px;
+        height: 100px;
+        background-color: #d8d8d8;
+        margin-bottom: 16px;
+    }
+
+    &_txt{
+        line-height: 28px;
+        height: 56px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    &_wrapper{
+        width: 100%;
+        margin-bottom:60px;
+
+        & .subtitle{
+            margin-bottom: 60px;
+        }
+    }
+    &_centerer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 80px;
+
+        &:last-child{
+            margin-bottom:0;
+        }
+    }
+    &_container{
+        display: flex;
+        justify-content:
+    }
+}
+
+.comment{
+    text-align: center;
+    font-size: 26px;
+    line-height: 40px;
+    height: 40px;
+    font-weight: bold;
+
+    &_wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 0 20px 0;
+        background-color: #f7f7f7;
+    }
+
+    &_container{
+        margin:20px 0 12px 0;
+    }
+
+    &_by{
+        text-align: center;
+        font-size: 16px;
+        height: 20px;
+        line-height: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    &_nav{
+        margin-top: 56px;
+        height: 12px;
+        display: flex;
+        justify-content: center;
+
+        &_item{
+            margin-right: 2px;
+            width: 12px;
+            height: 12px;
+            background-image: url("./assets/dot-off.svg");
+            cursor: pointer;
+
+            &:last-child{
+                margin-right:0;
+            }
+        }
+    }
+}

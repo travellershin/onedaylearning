@@ -1,5 +1,11 @@
 @import "base/init";
 @import "base/global";
 
+@import "modules/header";
 @import "modules/snackbar";
-@import "pages/live_editor";
+@import "modules/footer";
+
+@import "pages/index";
+@import "pages/curriculum";
+@import "pages/faq";
+@import "pages/location";

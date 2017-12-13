@@ -14,3 +14,13 @@ gulp.task('styles',function(){
   })
   .pipe(gulp.dest('./app/public'));
 });
+
+gulp.task('edustyles',function(){
+  return gulp.src('./app/edustyle/styles.css')
+  .pipe(postcss([cssImport, nested, cssvars, autoprefixer]))
+  .on('error', function(errorInfo){
+    console.log(errorInfo.toString());
+    this.emit('end');
+  })
+  .pipe(gulp.dest('./app/public/edu'));
+});

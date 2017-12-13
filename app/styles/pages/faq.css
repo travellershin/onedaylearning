@@ -1,0 +1,58 @@
+.faq{
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: solid 1px #102f80;
+
+    &:last-child{
+        border:none;
+        padding:0;
+    }
+
+    &_container{
+        width: 720px;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+
+    &_q{
+        height: 40px;
+        &::after{
+            clear:both;
+            display: block;
+            content: "";
+        }
+        &_txt{
+            float: left;
+            width: 680px;
+            line-height: 40px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+
+    &_simbol{
+        float: left;
+        width: 40px;
+        height: 40px;
+        line-height: 32px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    &_a{
+        margin-top: 16px;
+        &::after{
+            clear:both;
+            display: block;
+            content: "";
+        }
+        &_txt{
+            float: left;
+            width: 680px;
+            font-size: 16px;
+            line-height: 1.75;
+            font-weight: bold;
+        }
+    }
+}

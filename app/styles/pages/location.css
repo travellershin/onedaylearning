@@ -1,0 +1,74 @@
+.location{
+
+    &_map{
+        width: 700px;
+        height: 560px;
+        float: left;
+        margin-right: 22px;
+
+        &_box{
+            margin: 40px 0;
+            overflow: hidden;
+        }
+    }
+
+    &_container{
+        width: 1024px;
+        margin:0 auto;
+        padding-top: 52px;
+    }
+
+    &_addressLine{
+        height: 52px;
+        width: 100%;
+        margin-bottom: 8px;
+
+        &>p{
+            font-size: 28px;
+            line-height: 48px;
+            font-weight: bold;
+            border-bottom: solid 4px #102f80;
+            padding: 0 2px;
+            float: left;
+        }
+
+        &::after{
+            clear:both;
+            display: block;
+            content:"";
+        }
+    }
+
+    &_picture{
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+
+        &:hover{
+            filter: brightness(1.1);
+        }
+
+        &_box{
+            width: 1024px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+        &_cutter{
+            width: 330px;
+            height: 200px;
+            overflow: hidden;
+            float: left;
+            margin-right: 17px;
+
+            &:last-child{
+                margin:0;
+            }
+        }
+    }
+
+    &_footnote{
+        font-size: 17px;
+        font-weight: bold;
+        margin-bottom: 60px;
+    }
+}

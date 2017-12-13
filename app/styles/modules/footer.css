@@ -1,0 +1,45 @@
+.ft{
+    height: 180px;
+    width: 100%;
+    background-color: #102f80;
+    color: white;
+
+    &_wrapper{
+        width: 1024px;
+        height: 100%;
+        margin: 0 auto;
+
+        &:after{
+            clear:both;
+            display: block;
+            content: "";
+        }
+    }
+
+    &_address{
+        float: left;
+        padding-top: 20px;
+
+        &_companyLogo{
+            height: 40px;
+            line-height: 40px;
+            margin-bottom: 20px;
+        }
+
+        &_txt{
+            line-height: 20px;
+            margin-bottom: 4px;
+            font-size: 12px;
+            letter-spacing: -0.8px;
+        }
+    }
+
+    &_link{
+        float: right;
+        padding: 74px 0;
+
+        & img{
+            margin-left: 20px;
+        }
+    }
+}

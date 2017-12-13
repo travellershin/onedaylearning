@@ -1,0 +1,193 @@
+.curriculum{
+    width: 100%;
+    background-color: #f7f7f7;
+
+    & .subtitle{
+        margin-bottom: 12px;
+    }
+
+    &_description{
+        line-height: 28px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &_container{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    &_part{
+        margin-top: 80px;
+        width: 960px;
+
+        &_header{
+            height: 26px;
+            line-height: 26px;
+
+            &:after{
+                display:block;
+                clear:both;
+                content:"";
+            }
+
+            &_title{
+                float: left;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            &_time{
+                float: right;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &_table{
+        border-top: solid 3px #102f80;
+        border-bottom: solid 2px #102f80;
+        margin:16px 0;
+
+        &_liner{
+            width: 960px;
+            height: 72px;
+            border-bottom: solid 1px #102f80;
+
+            &::after{
+                clear:both;
+                display: block;
+                content:"";
+            }
+
+            & .CT_time{
+                line-height: 72px;
+                font-size: 18px;
+                font-weight: bold;
+                width: 160px;
+                height: 72px;
+                text-align: center;
+                background-color: rgba(16, 47, 128, 0.05);
+                float: left;
+            }
+
+            & .CT_whiteBack{
+                height: 24px;
+                line-height: 24px;
+                background-color: white;
+                padding: 2px;
+                padding-right: 4px;
+            }
+
+            & .CT_contents{
+                box-sizing: border-box;
+                width: 800px;
+                height: 72px;
+                float: left;
+                padding: 24px 0 24px 50px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            &--dotted{
+                background-image: url("./assets/img-eattile-bg.png");
+            }
+        }
+    }
+
+    &_footnote{
+        width: 960px;
+        margin:0 auto;
+        font-size: 18px;
+        height: 24px;
+        line-height: 24px;
+        font-weight: bold;
+        padding-bottom: 70px;
+    }
+}
+
+.output{
+    &_container{
+        margin: 60px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &::after{
+        clear: both;
+        display: block;
+        content: "";
+    }
+
+    &_left{
+        float: left;
+    }
+
+    &_right{
+        width: 512px;
+        margin-left: 16px;
+        float: left;
+        height: 1000px;
+        position: relative;
+    }
+
+    &_txt{
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: bold;
+
+        &--first{
+            margin-bottom: 36px;
+        }
+
+        &--last{
+            position: absolute;
+            bottom: 16px;
+            width: 512px;
+        }
+    }
+
+    &_liner{
+        height: 32px;
+        margin-top: 16px;
+
+        &>img{
+            float: left;
+            margin-right: 8px;
+        }
+        &>p{
+            float: left;
+            font-size: 20px;
+            line-height: 32px;
+            font-weight: bold;
+        }
+
+        &::after{
+            clear: both;
+            display: block;
+            content: "";
+        }
+
+        &--thick{
+            height: 40px;
+            margin-bottom: 16px;
+
+            &>img{
+                margin-right: 0;
+            }
+            &>p{
+                font-size: 21px;
+                line-height: 40px;
+            }
+        }
+    }
+
+    &_footnote{
+        margin-top: 16px;
+        font-weight: bold;
+        font-size: 17px;
+    }
+}

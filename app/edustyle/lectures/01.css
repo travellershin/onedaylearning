@@ -1,0 +1,13 @@
+.e01{
+    ::after{
+        clear:both;
+        display: block;
+        content: "";
+    }
+    &_view{
+        float: left;
+        width: 60%;
+        height: 100%;
+        background-color: grey;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하루만에. 웹</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hd">
+        <h1>
+            <a class="hd_logo" href="https://onedaylearning.co.kr/" title="하루만에 웹 홈페이지로 이동">
+                <img class="hd_log_img" src="./assets/logo.svg" alt="하루만에 웹"/>
+            </a>
+        </h1>
+        <nav class="hd_nav">
+            <ul class="hd_nav_container">
+                <li><a class="hd_nav_item" href="difference.html">차별점</a></li>
+                <li><a class="hd_nav_item" href="curriculum.html">수업내용</a></li>
+                <li><a class="hd_nav_item" href="faq.html">자주하는 질문</a></li>
+                <li><a class="hd_nav_item hd_nav_item--active" href="location.html">오시는 길</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="location_container">
+        <div class="location_addressLine">
+            <p>서울시 강남구 역삼로 180</p>
+        </div>
+        <div class="location_addressLine">
+            <p>(역삼동, 790-6) 마루180 빌딩</p>
+        </div>
+        <div class="location_map_box">
+            <iframe class="location_map"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA986eQoZ8XUqgw1CnSpfe1PJvyMf9GJbo
+            &q=마루180&center=37.4995,127.0369783&zoom=15" allowfullscreen></iframe>
+            <img src="./assets/img-bus.svg"/>
+        </div>
+
+        <div class="location_picture_box">
+            <div class="location_picture_cutter">
+                <img class="location_picture" src="./assets/location1.png"/>
+            </div>
+            <div class="location_picture_cutter">
+                <img class="location_picture" src="./assets/location2.jpg"/>
+            </div>
+            <div class="location_picture_cutter">
+                <img class="location_picture" src="./assets/location3.jpg"/>
+            </div>
+        </div>
+        <p class="location_footnote">* 마루180 빌딩에 들어와서 바로 정면 마이크임팩트 스튜디오 안으로 오시면 됩니다. 수업이 열리는날 파란옷을 입은 스텝이 안내합니다.</p>
+
+
+    </article>
+
+
+    <footer class="ft">
+        <div class="ft_wrapper">
+            <address class="ft_address">
+                <h2>
+                    <img  class="ft_address_companyLogo" src="./assets/logo-footer.svg" alt="원데이러닝"/>
+                </h2>
+                <p class="ft_address_txt">서울시 강남구 역삼로 180</p>
+                <p class="ft_address_txt">수업관련 문의: 신동원 010-5175-7908</p>
+                <p class="ft_address_txt">메일: onedaycoding@gmail.com</p>
+            </address>
+            <div class="ft_link">
+                <a href="https://www.instagram.com/oneday.web">
+                    <img src="./assets/icon-instagram.svg" alt="하루만에 웹 인스타그램"/>
+                </a>
+                <a href="https://www.facebook.com/%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90%EC%9B%B9-124986761536309">
+                    <img src="./assets/icon-facebook.svg" alt="하루만에 웹 페이스북"/>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox displayNone">
+        <div class="lightbox_wrapper">
+            <div class="lightbox_img_cutter">
+                <img class="lightbox_img"/>
+            </div>
+            <p class="lightbox_footnote">아무 곳이나 클릭해 닫기</p>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./scripts/location.js"></script>
+
+</body>
+</html>
