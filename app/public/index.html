@@ -3,7 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>하루만에. 웹</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="하루만에.웹">
+    <meta property="og:description" content="웹 페이지 만들기, 정말 하루면 배울 수 있습니다. 지금 시작하세요!">
+    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/oneday-917ef.appspot.com/o/KakaoTalk_20171214_010152494.jpg?alt=media&token=54087783-1fa4-4d94-bebc-2e55bcbcbb35">
+    <meta property="og:url" content="https://onedaylearning.co.kr/difference.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="하루만에.웹">
+    <meta name="twitter:description" content="웹 페이지 만들기, 정말 하루면 배울 수 있습니다. 지금 시작하세요!">
+    <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/oneday-917ef.appspot.com/o/KakaoTalk_20171214_010152494.jpg?alt=media&token=54087783-1fa4-4d94-bebc-2e55bcbcbb35">
+    <meta name="twitter:domain" content="하루만에.웹">
+    <title>하루만에.웹</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,21 +34,13 @@
             </ul>
         </nav>
     </header>
-    <div class="banner_wrapper">
-        <img class="banner" src="./assets/banner0.svg" alt="왕초보 코딩탈출 하루만에 웹"/>
-        <div class="banner_arrow banner_arrow_left">
-            <img src="./assets/icon-banner-left.svg" alt="왼쪽 배너 보기"/>
-        </div>
-        <div class="banner_arrow banner_arrow_right">
-            <img src="./assets/icon-banner-right.svg" alt="오른쪽 배너 보기"/>
-        </div>
-        <div class="banner_dom">
-            <p class="banner_txt">요즘 코딩 열풍이라는데<br>책은 두껍고 학원은 부담스럽죠?<br>함께 딱 하루만 투자해보세요.</p>
-            <div class="hd_nav_apply displayNone">알림받기</div>
-        </div>
-        <div class="banner_nav">
-            <div class="banner_nav_item dot--on"></div>
-            <div class="banner_nav_item"></div>
+
+    <div class="banner">
+        <img src="./assets/pictures/mainbanner1.jpg" alt="수업모습">
+        <div class="upperTxt">
+            <p>1월 28일(일요일)</p>
+            <p>딱 하루 배워서 만드는</p>
+            <p>내 포트폴리오 사이트</p>
         </div>
     </div>
     <div class="description_wrapper">
@@ -55,14 +58,14 @@
         <p class="subtitle">오픈예정 수업</p>
         <div class="course_container">
             <div class="course">
-                <img src="./assets/img-class-01.svg" alt="1월 6일 오픈 예정 수업"/>
-                <p class="course_apply">수강신청</p>
-                <p class="course_price">15만원</p>
+                <img src="./assets/img-class-01.svg" alt="1월 28일 오픈 예정 수업"/>
+                <a href="apply.html?date=180128"><p class="course_apply">수강신청</p></a>
+                <p class="course_price">128,000원</p>
             </div>
             <div class="course">
-                <img src="./assets/img-class-02.svg" alt="1월 20일 오픈 예정 수업"/>
-                <p class="course_apply">수강신청</p>
-                <p class="course_price">15만원</p>
+                <img src="./assets/img-class-02.svg" alt="2월 중 오픈 예정 수업"/>
+                <p class="course_apply pre_inform">오픈알림</p>
+                <p class="course_price">128,000원</p>
             </div>
         </div>
     </div>
@@ -120,7 +123,7 @@
         </div>
     </footer>
 
-    <div class="lightbox displayNone">
+    <div class="lightbox_pre displayNone">
         <div class="index_cannotApply ICA">
             <img class="ICA_close" src="./assets/icon-close.svg"/>
             <p class="ICA_title">수강신청 기간이 아닙니다.</p>

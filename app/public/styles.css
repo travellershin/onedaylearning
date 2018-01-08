@@ -128,7 +128,7 @@ h1,h2,h3,h4,h5,h6,p{
 .dot--on{
     background-image: url("./assets/dot-on.svg") !important;
 }
-.lightbox{
+.lightbox, .lightbox_pre{
     position: fixed;
     top:0;
     left: 0;
@@ -146,24 +146,27 @@ h1,h2,h3,h4,h5,h6,p{
             align-items: center;
     z-index: 9999;
 }
-.lightbox_wrapper{
+.lightbox_wrapper,.lightbox_pre_wrapper{
         width: 90%;
         height: 90%;
     }
-.lightbox_footnote{
+.lightbox_footnote,.lightbox_pre_footnote{
         color: #fafafa;
         width: 100%;
         text-align: center;
         margin-top: 30px;
     }
-.lightbox_img{
+.lightbox_img,.lightbox_pre_img{
         width: 100%;
         height: auto;
     }
-.lightbox_img_cutter{
+.lightbox_img_cutter,.lightbox_pre_img_cutter{
             height: calc(100% - 60px);
             overflow: hidden;
         }
+.hide{
+    visibility: hidden;
+}
 .hd{
     width: 100%;
     min-width: 800px;
@@ -410,92 +413,30 @@ However, delay the fade out process for 2.5 seconds */
         cursor: pointer;
     }
 .banner{
-    width: 1280px;
+    width:100%;
     height: 440px;
-    position: absolute;
-    left: 50%;
-    margin-left: -640px;
-
+    overflow: hidden;
+    position: relative;
 }
-.banner_dom{
-        position: absolute;
-        left: 50%;
-        margin-left:-480px;
-        top: 126px;
-        width: 382px;
-        height: 185px;
-    }
-.banner_dom .hd_nav_apply{
-            margin: 25px 0 0 0;
-        }
-.banner_txt{
-        font-size: 26px;
-        line-height: 1.46;
-        font-weight: bold;
-    }
-.banner_wrapper{
-        width:100%;
-        height: 440px;
-        overflow: hidden;
-        background-color: #f7f7f7;
-        position: relative;
-    }
-.banner_arrow{
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        border-radius: 40px;
-        background-color: rgba(0, 0, 0, 0.1);
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        cursor: pointer;
-    }
-.banner_arrow:hover{
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-.banner_arrow:active{
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-.banner_arrow_left{
-            left: 32px;
-            top: 200px;
-        }
-.banner_arrow_right{
-            right: 32px;
-            top: 200px;
-            -webkit-transform: rotate(180deg);
-                    transform: rotate(180deg);
-        }
-.banner_nav{
-        height: 12px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        position: absolute;
-        bottom: 20px;
+.banner>img{
         width: 100%;
+        margin-top: -300px;
+        -webkit-filter: brightness(0.5);
+                filter: brightness(0.5);
+    }
+.banner>.upperTxt{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 126px;
         left: 0;
     }
-.banner_nav_item{
-            margin-right: 2px;
-            width: 12px;
-            height: 12px;
-            background-image: url("./assets/dot-off.svg");
-            cursor: pointer;
+.banner>.upperTxt>p{
+            font-size: 32px;
+            line-height: 48px;
+            font-weight: bold;
+            color: #ffffff;
         }
-.banner_nav_item:last-child{
-                margin-right:0;
-            }
 .description_wrapper{
         width: 100%;
         height: auto;
@@ -743,6 +684,35 @@ However, delay the fade out process for 2.5 seconds */
                 font-size: 24px;
                 font-weight: bold;
             }
+.curriculum .bgWhite{
+        background-color: white;
+        padding-bottom: 60px;
+    }
+.curriculum .gallery{
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+.curriculum .gallery .card{
+            margin: 7px;
+        }
+.curriculum .gallery .cardTitle{
+            font-size: 18px;
+            line-height: 32px;
+            font-weight: bold;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+.curriculum .gallery .cardTxt{
+            height: 22px;
+            font-size: 14px;
+            font-weight: bold;
+
+        }
 .curriculum_table{
         border-top: solid 3px #102f80;
         border-bottom: solid 2px #102f80;
@@ -1076,4 +1046,420 @@ However, delay the fade out process for 2.5 seconds */
         font-weight: bold;
         font-size: 16px;
         line-height: 1.75;
+    }
+.a_wrapper{
+    width: 100%;
+    height: calc(100% - 252px);
+    background-color: #f7f7f7;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 30px 0;
+    overflow: auto;
+}
+.applyBox{
+    width: 1024px;
+    background-color: white;
+    margin:0 auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 30px 40px;
+}
+.applyBox .stepBox{
+        overflow: hidden;
+    }
+.applyBox .stepBox>li{
+            font-size: 18px;
+            line-height: 1;
+            letter-spacing: -0.8px;
+            color: #bebebe;
+            float: left;
+        }
+.applyBox .stepBox>.step{
+            margin:0 4px;
+            line-height: 1.33;
+            font-weight: bold;
+            cursor: pointer;
+        }
+.applyBox .stepBox>.step--now{
+                color: #102f80;
+            }
+.applyBox .stepBox>.step:first-child{
+                margin-left:0;
+            }
+.applyBox .nextStep{
+        width: 320px;
+        height: 40px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        margin: 0 auto;
+        border: solid 2px #102f80;
+        font-size: 14px;
+        line-height: 38px;
+        font-weight: bold;
+        letter-spacing: -0.6px;
+        text-align: center;
+        color: #102f80;
+        cursor: pointer;
+    }
+.stepWrapper{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    padding: 52px 0 60px 0;
+    overflow: hidden;
+}
+.sR1 .d_date{
+        color:#ed3995;
+    }
+.sR1 .frame{
+        width: 439px;
+        height: 400px;
+        overflow: hidden;
+        border: solid 2px #102f80;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        float: left;
+    }
+.sR1 .frame_padding{
+            width: 395px;
+            height: 356px;
+            margin: 20px;
+            overflow: hidden;
+        }
+.sR1 .frame img{
+            width: 600px;
+            height: auto;
+            margin-left: -50px;
+        }
+.sR1 .info{
+        float: left;
+        width: 480px;
+        margin-left: 24px;
+    }
+.sR1 .info .title{
+            height: 32px;
+            font-size: 24px;
+            line-height: 1.33;
+            letter-spacing: -1px;
+            color: #102f80;
+            font-weight: bold;
+            margin-bottom: 28px;
+        }
+.sR1 .liner{
+        margin-bottom: 24px;
+        overflow: hidden;
+    }
+.sR1 .liner .subTitle, .sR1 .liner .text{
+            width: 60px;
+            height: 24px;
+            font-size: 15px;
+            line-height: 1.5;
+            letter-spacing: -0.7px;
+            color: #102f80;
+            font-weight: bold;
+            float: left;
+            margin-right: 8px;
+        }
+.sR1 .liner .subTitle--applyNumber,.sR1 .liner .text--applyNumber{
+                line-height: 40px !important;
+            }
+.sR1 .liner .text{
+            width: auto;
+        }
+.sR1 .liner .applyNumber{
+            border-radius: 5px;
+            width: 82px;
+            height: 40px;
+            border: solid 1px #e0e0e0;
+            font-size: 14px;
+            color: #262e3e;
+            padding-left: 12px;
+        }
+.sR2 .title{
+        width: 100%;
+        height: 24px;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: -1px;
+        text-align: center;
+        color: #102f80;
+        margin-bottom: 40px;
+        font-weight: bold;
+    }
+.sR2 .subTitle{
+        width: 100%;
+        height: 40px;
+        background-color: #f4f4f4;
+        font-size: 16px;
+        line-height: 40px;
+        padding-left: 20px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        font-weight: bold;
+        margin-bottom: 24px;
+        margin-top: 32px;
+    }
+.sR2 .text{
+        font-size: 14px;
+        line-height: 28px;
+        height: 28px;
+        margin-left: 20px;
+        font-weight: bold;
+    }
+.sR3 .title{
+        width: 100%;
+        height: 24px;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: -1px;
+        text-align: center;
+        color: #102f80;
+        margin-bottom: 16px;
+        font-weight: bold;
+    }
+.sR3 .intro{
+        width: 100%;
+        font-size: 14px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        font-weight: bold;
+    }
+.sR3 .tabZone{
+        width: 100%;
+        margin: 80px 0 32px 0;
+        padding-bottom: 20px;
+        border-bottom: solid 1px #bebebe;
+        overflow: hidden;
+    }
+.sR3 .tabZone>.tab{
+            float: left;
+            height: 32px;
+            font-size: 28px;
+            line-height: 1.14;
+            letter-spacing: -1.2px;
+            color: #bebebe;
+            margin-left: 16px;
+            padding-left: 16px;
+            border-left: solid 1px #bebebe;
+            font-weight: bold;
+        }
+.sR3 .tabZone>.tab--selected{
+                color: #102f80 !important;
+            }
+.sR3 .tabZone>.tab:first-child{
+                margin:0;
+                padding:0;
+                border:none;
+            }
+.sR3 .subTitle{
+        margin-top: 32px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+.sR3 input{
+        width: 220px;
+        height: 40px;
+        background-color: #ffffff;
+        border: solid 1px #bebebe;
+        margin-top: 4px;
+        font-size: 16px;
+        padding-left: 20px;
+    }
+.sR3 .input--long{
+        width: 800px;
+    }
+.sR3 .divider{
+        margin:40px 0;
+        border-bottom: solid 1px #bebebe;
+        width: 100%;
+    }
+.sR3 .hint{
+        height: 24px;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: -0.6px;
+        color: #ed3995;
+        font-weight: bold;
+    }
+.sR3 .law{
+        margin-top: 60px;
+    }
+.sR4 .title{
+        height: 32px;
+        font-size: 28px;
+        line-height: 1.14;
+        letter-spacing: -1.2px;
+        color: #102f80;
+        font-weight: bold;
+    }
+.sR4 .horLine{
+        height: 20px;
+        border-bottom: solid 1px #bebebe;
+        margin-bottom: 20px;
+    }
+.sR4 .liner{
+        overflow: hidden;
+        height: 24px;
+        margin-bottom: 16px;
+    }
+.sR4 .liner>p{
+            float: left;
+            font-weight: bold;
+            line-height: 24px;
+        }
+.sR4 .d_className{
+        height: 32px;
+        line-height: 32px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+.sR4 .subTitle{
+        width: 70px;
+    }
+.sR4 .priceZone{
+        overflow: hidden;
+        margin-bottom: 120px;
+    }
+.sR4 .priceZone>.title{
+            float: left;
+        }
+.sR4 .priceZone>.finalPrice{
+            float: right;
+            font-size: 28px;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 16px;
+        }
+.sR4 .priceZone>.useCoupon{
+            float: right;
+            width: 120px;
+            height: 40px;
+            border: solid 2px #102f80;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            line-height: 36px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+.sR4 .billMethod{
+        height: 32px;
+        line-height: 32px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+.sR4 .accountTitle{
+        margin-top: 28px;
+        line-height: 32px;
+        font-size: 20px;
+        color: #ed3995;
+        font-weight: bold;
+        margin-bottom: 8px;
+        text-decoration: underline;
+    }
+.sR4 .accountNo{
+        line-height: 32px;
+        font-size: 20px;
+        color: #ed3995;
+        font-weight: bold;
+        margin-bottom: 28px;
+        text-decoration: underline;
+    }
+.sR4 .hint{
+        height: 28px;
+        line-height: 28px;
+        font-size: 16px;
+        color: #ed3995;
+        font-weight: bold;
+    }
+.sR4 .finalize{
+        height: 36px;
+        line-height: 36px;
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+    }
+.sR4 .finalPrice_shorten{
+        height: 32px;
+        line-height: 32px;
+        font-size: 28px;
+        text-align: center;
+        font-weight: bold;
+        margin: 40px 0;
+        color: #ed3995;
+    }
+.sR4 .alCenter{
+        text-align: center;
+    }
+.sR4 .finalPrice{
+        color: #ed3995;
+    }
+.sR4 .cLine{
+        margin-right: 12px;
+        color: #102f80;
+        font-size: 24px;
+        text-decoration: line-through;
+    }
+.couponeZone{
+    width: 380px;
+    height: 372px;
+    background-color: white;
+    border: solid 1px #979797;
+    position: relative;
+}
+.couponeZone>.closeCouponPop{
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+.couponeZone>.title{
+        margin-top: 36px;
+        text-align: center;
+        height: 32px;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: bold;
+        margin-bottom: 54px;
+    }
+.couponeZone>.largeHint{
+        margin-left: 30px;
+        height: 20px;
+        font-size: 16px;
+        line-height: 1.43;
+        letter-spacing: -0.6px;
+        color: #102f80;
+        font-weight: bold;
+    }
+.couponeZone>.couponCode{
+        width: 300px;
+        height: 48px;
+        background-color: #ffffff;
+        border: solid 1px #cdcdcd;
+        margin: 4px 0 0 30px;
+        padding-left: 20px;
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+.couponeZone>.smallHint{
+        margin-left: 30px;
+        height: 20px;
+        font-size: 14px;
+        line-height: 1.43;
+        letter-spacing: -0.6px;
+        color: #102f80;
+        font-weight: bold;
+        margin-bottom: 72px;
+    }
+.couponeZone>.applyCoupon{
+        width: 320px;
+        height: 40px;
+        border: solid 2px #102f80;
+        background-color: white;
+        margin-left: 28px;
+        cursor: pointer;
     }

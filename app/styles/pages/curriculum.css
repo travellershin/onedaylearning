@@ -45,6 +45,34 @@
             }
         }
     }
+    & .bgWhite{
+        background-color: white;
+        padding-bottom: 60px;
+    }
+    & .gallery{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        & .card{
+            margin: 7px;
+        }
+
+        & .cardTitle{
+            font-size: 18px;
+            line-height: 32px;
+            font-weight: bold;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+
+        & .cardTxt{
+            height: 22px;
+            font-size: 14px;
+            font-weight: bold;
+
+        }
+    }
 
     &_table{
         border-top: solid 3px #102f80;

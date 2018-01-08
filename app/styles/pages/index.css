@@ -1,3 +1,4 @@
+
 .ICA{
     width: 620px;
     height: 580px;
@@ -101,88 +102,30 @@
 }
 
 .banner{
-    width: 1280px;
+    width:100%;
     height: 440px;
-    position: absolute;
-    left: 50%;
-    margin-left: -640px;
+    overflow: hidden;
+    position: relative;
 
-    &_dom{
-        position: absolute;
-        left: 50%;
-        margin-left:-480px;
-        top: 126px;
-        width: 382px;
-        height: 185px;
-
-        & .hd_nav_apply{
-            margin: 25px 0 0 0;
-        }
-    }
-    &_txt{
-        font-size: 26px;
-        line-height: 1.46;
-        font-weight: bold;
-    }
-
-    &_wrapper{
-        width:100%;
-        height: 440px;
-        overflow: hidden;
-        background-color: #f7f7f7;
-        position: relative;
-    }
-
-    &_arrow{
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        border-radius: 40px;
-        background-color: rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-        &:hover{
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-        &:active{
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-        &_left{
-            left: 32px;
-            top: 200px;
-        }
-        &_right{
-            right: 32px;
-            top: 200px;
-            transform: rotate(180deg);
-        }
-    }
-
-    &_nav{
-        height: 12px;
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        bottom: 20px;
+    &>img{
         width: 100%;
+        margin-top: -300px;
+        filter: brightness(0.5);
+    }
+    &>.upperTxt{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 126px;
         left: 0;
 
-        &_item{
-            margin-right: 2px;
-            width: 12px;
-            height: 12px;
-            background-image: url("./assets/dot-off.svg");
-            cursor: pointer;
-
-            &:last-child{
-                margin-right:0;
-            }
+        &>p{
+            font-size: 32px;
+            line-height: 48px;
+            font-weight: bold;
+            color: #ffffff;
         }
     }
-
 }
 
 .description{
