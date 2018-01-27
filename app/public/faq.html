@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript">
+        if(screen.width<640){
+            location.href="https://m.onedaylearning.co.kr/qna.html"
+        }
+    </script>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:type" content="website">
     <meta property="og:title" content="하루만에.웹">
     <meta property="og:description" content="웹 페이지 만들기, 정말 하루면 배울 수 있습니다. 지금 시작하세요!">
@@ -19,23 +22,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="hd">
-        <h1>
-            <a class="hd_logo"  href="index.html" title="하루만에 웹 홈페이지로 이동">
-                <img class="hd_logo_img" src="./assets/logo.svg" alt="하루만에 웹"/>
-            </a>
-        </h1>
-        <nav class="hd_nav">
-            <ul class="hd_nav_container">
-                <li><a class="hd_nav_item" href="difference.html">차별점</a></li>
-                <li><a class="hd_nav_item" href="curriculum.html">수업내용</a></li>
-                <li><a class="hd_nav_item hd_nav_item--active" href="faq.html">자주하는 질문</a></li>
-                <li><a class="hd_nav_item" href="location.html">오시는 길</a></li>
-                <p class="hd_nav_apply">수강신청</p>
-            </ul>
-        </nav>
-    </header>
+    <div class="hd_wrapper">
+        <header class="hd">
+            <h1>
+                <a class="hd_logo"  href="index.html" title="하루만에 웹 홈페이지로 이동">
+                    <img class="hd_logo_img" src="./assets/logo.svg" alt="하루만에 웹"/>
+                </a>
+            </h1>
+            <nav class="hd_nav">
+                <ul class="hd_nav_container">
+                    <li><a class="hd_nav_item" href="difference.html">차별점</a></li>
+                    <li><a class="hd_nav_item" href="curriculum.html">수업내용</a></li>
+                    <li><a class="hd_nav_item hd_nav_item--active" href="faq.html">자주하는 질문</a></li>
+                    <li><a class="hd_nav_item" href="location.html">오시는 길</a></li>
+                    <p class="hd_nav_apply">수강신청</p>
+                </ul>
+            </nav>
+        </header>
+    </div>
 
+    <div class="faq_frame">
+        <img src="./assets/pictures/faq.jpg" alt="수업장 풍경">
+    </div>
     <article class="faq_container">
         <div class="faq">
             <div class="faq_q">
@@ -125,6 +133,6 @@
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     <script src="./scripts/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./scripts/modules/apply.js"></script>
+    <script src="./scripts/modules/toast.js"></script>
 </body>
 </html>

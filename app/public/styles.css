@@ -168,15 +168,22 @@ h1,h2,h3,h4,h5,h6,p{
     visibility: hidden;
 }
 .hd{
-    width: 100%;
-    min-width: 800px;
-    height: 72px;
     max-width: 1024px;
+    min-width: 800px;
     margin:0 auto;
-    overflow: hidden;
-    -webkit-box-shadow: 0 1px 0 0 #dddddd;
-            box-shadow: 0 1px 0 0 #dddddd;
 }
+.hd_wrapper{
+        width: 100%;
+        height: 72px;
+        overflow: hidden;
+        -webkit-box-shadow: 0 1px 0 0 #dddddd;
+                box-shadow: 0 1px 0 0 #dddddd;
+        position: fixed;
+        top:0;
+        left: 0;
+        background-color: white;
+        z-index: 999;
+    }
 .hd_logo{
         overflow: hidden;
         margin:16px 0;
@@ -317,7 +324,7 @@ However, delay the fade out process for 2.5 seconds */
         }
 .ft_link{
         float: right;
-        padding: 74px 0;
+        padding: 69px 0;
     }
 .ft_link img{
             margin-left: 20px;
@@ -417,6 +424,7 @@ However, delay the fade out process for 2.5 seconds */
     height: 440px;
     overflow: hidden;
     position: relative;
+    margin-top: 72px;
 }
 .banner>img{
         width: 100%;
@@ -431,7 +439,7 @@ However, delay the fade out process for 2.5 seconds */
         top: 126px;
         left: 0;
     }
-.banner>.upperTxt>p{
+.banner>.upperTxt p{
             font-size: 32px;
             line-height: 48px;
             font-weight: bold;
@@ -639,6 +647,7 @@ However, delay the fade out process for 2.5 seconds */
 .curriculum{
     width: 100%;
     background-color: #f7f7f7;
+    margin-top: 70px;
 }
 .curriculum .subtitle{
         margin-bottom: 12px;
@@ -844,15 +853,30 @@ However, delay the fade out process for 2.5 seconds */
     margin-bottom: 32px;
     padding-bottom: 32px;
     border-bottom: solid 1px #102f80;
+    margin-top: 70px;
 }
+.faq:first-child{
+        margin-top:20px;
+    }
 .faq:last-child{
         border:none;
         padding:0;
     }
+.faq_frame{
+        width: 100%;
+        height: 384px;
+        overflow: hidden;
+        position: relative;
+    }
+.faq_frame>img{
+            width: 100%;
+            height: auto;
+            margin-top: -140px;
+        }
 .faq_container{
         width: 720px;
         margin: 0 auto;
-        padding: 50px 0;
+        padding: 30px 0;
     }
 .faq_q{
         height: 40px;
@@ -903,7 +927,7 @@ However, delay the fade out process for 2.5 seconds */
         height: 560px;
         float: left;
         position: absolute;
-        z-index: 999;
+        z-index: 300;
     }
 .location_map_box{
             margin: 40px 0;
@@ -921,12 +945,13 @@ However, delay the fade out process for 2.5 seconds */
             text-align: center;
             font-size: 24px;
             font-weight: bold;
-            z-index: 998;
+            z-index: 200;
         }
 .location_container{
         width: 1024px;
         margin:0 auto;
         padding-top: 52px;
+        margin-top: 70px;
     }
 .location_addressLine{
         height: 52px;
@@ -994,8 +1019,14 @@ However, delay the fade out process for 2.5 seconds */
             align-items: center;
 }
 .difference_summary{
-        padding: 12px 0 70px 0;
-        background-color: #f7f7f7;
+        margin-top: 70px;
+        padding-bottom:70px;
+        position: relative;
+        background-image: url("./assets/pictures/difference.jpg");
+        background-size: cover;
+        background-position: bottom;
+
+        color:white;
     }
 .difference_summary_container{
             display: -webkit-box;
@@ -1006,6 +1037,7 @@ However, delay the fade out process for 2.5 seconds */
             margin-top: 40px;
             -ms-flex-pack:distribute;
                 justify-content:space-around;
+            z-index: 2;
         }
 .difference_summary_box{
             width: 288px;
@@ -1022,7 +1054,7 @@ However, delay the fade out process for 2.5 seconds */
         }
 .difference_summary_txt{
             display: inline-block;
-            border-bottom: solid 3px #102f80;
+            border-bottom: solid 3px #ffffff;
             line-height: 40px;
             font-size: 22px;
             font-weight: bold;
@@ -1034,7 +1066,7 @@ However, delay the fade out process for 2.5 seconds */
     }
 .difference_title{
         height: 28px;
-        font-size: 20px;
+        font-size: 22px;
         line-height: 1.4;
         border-bottom: solid 3px #102f80;
         font-weight: bold;
@@ -1049,12 +1081,12 @@ However, delay the fade out process for 2.5 seconds */
     }
 .a_wrapper{
     width: 100%;
-    height: calc(100% - 252px);
     background-color: #f7f7f7;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 30px 0;
-    overflow: auto;
+    padding-top: 100px;
+    min-height: calc(100% - 180px);
 }
 .applyBox{
     width: 1024px;
@@ -1115,22 +1147,10 @@ However, delay the fade out process for 2.5 seconds */
         width: 439px;
         height: 400px;
         overflow: hidden;
-        border: solid 2px #102f80;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
         float: left;
     }
-.sR1 .frame_padding{
-            width: 395px;
-            height: 356px;
-            margin: 20px;
-            overflow: hidden;
-        }
-.sR1 .frame img{
-            width: 600px;
-            height: auto;
-            margin-left: -50px;
-        }
 .sR1 .info{
         float: left;
         width: 480px;
@@ -1151,7 +1171,6 @@ However, delay the fade out process for 2.5 seconds */
     }
 .sR1 .liner .subTitle, .sR1 .liner .text{
             width: 60px;
-            height: 24px;
             font-size: 15px;
             line-height: 1.5;
             letter-spacing: -0.7px;
@@ -1163,6 +1182,11 @@ However, delay the fade out process for 2.5 seconds */
 .sR1 .liner .subTitle--applyNumber,.sR1 .liner .text--applyNumber{
                 line-height: 40px !important;
             }
+.sR1 .liner .pinkPink{
+            color:#ed3995;
+            line-height: 32px;
+            font-size: 18px;
+        }
 .sR1 .liner .text{
             width: auto;
         }
@@ -1225,9 +1249,17 @@ However, delay the fade out process for 2.5 seconds */
         text-align: center;
         font-weight: bold;
     }
+.sR3 .fullfillHint{
+        margin-top: 60px;
+        color: #ed3995;
+        font-size: 14px;
+        line-height: 24px;
+        height: 24px;
+        font-weight: bold;
+    }
 .sR3 .tabZone{
         width: 100%;
-        margin: 80px 0 32px 0;
+        margin: 20px 0 32px 0;
         padding-bottom: 20px;
         border-bottom: solid 1px #bebebe;
         overflow: hidden;
@@ -1266,7 +1298,7 @@ However, delay the fade out process for 2.5 seconds */
         border: solid 1px #bebebe;
         margin-top: 4px;
         font-size: 16px;
-        padding-left: 20px;
+        padding-left: 12px;
     }
 .sR3 .input--long{
         width: 800px;
@@ -1437,12 +1469,12 @@ However, delay the fade out process for 2.5 seconds */
     }
 .couponeZone>.couponCode{
         width: 300px;
-        height: 48px;
+        height: 36px;
         background-color: #ffffff;
         border: solid 1px #cdcdcd;
-        margin: 4px 0 0 30px;
+        margin: 10px 0 6px 30px;
         padding-left: 20px;
-        font-size: 28px;
+        font-size: 24px;
         letter-spacing: 1px;
     }
 .couponeZone>.smallHint{
@@ -1451,7 +1483,7 @@ However, delay the fade out process for 2.5 seconds */
         font-size: 14px;
         line-height: 1.43;
         letter-spacing: -0.6px;
-        color: #102f80;
+        color: #ed3995;
         font-weight: bold;
         margin-bottom: 72px;
     }

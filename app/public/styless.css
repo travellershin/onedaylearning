@@ -1,0 +1,362 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p,
+a, address, code, img, q, s, strong, sub, sup, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, section, summary, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.red{
+    background-color: #ff8787;
+}
+
+.yello{
+    background-color: #ffd43b;
+}
+
+.yello2{
+    background-color: #ffe066;
+}
+
+.yello3{
+    background-color: #fcc419;
+}
+
+.blue{
+    background-color: #4dabf7;
+}
+
+.green{
+    background-color: #69db7c;
+}
+
+.navy{
+    background-color: #95A5A6;
+}
+
+.navy1{
+    background-color: #c3fae8;
+}
+
+.navy2{
+    background-color: #63e6be;
+}
+
+.navy3{
+    background-color: #20c997;
+}
+
+.navy4{
+    background-color: #0ca678;
+}
+
+.navy5{
+    background-color: #087f5b;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.hidden{
+    display: none;
+}
+
+.header{
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.instruct{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 70px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.leftQ, .rightQ{
+    width: 110px;
+    height: 50px;
+    line-height: 50px;
+    top:10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #ee0055;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: bold;
+    color:#eeeeee;
+    position: absolute;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.leftQ:hover,.rightQ:hover{
+        background-color: #ff0055;
+    }
+
+.leftQ{
+    left: 30px;
+}
+
+.rightQ{
+    right:30px;
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.remote{
+    width: 120px;
+    height: 70px;
+    margin:0 auto;
+}
+
+.btn_toggle{
+    width: 120px;
+    height: 40px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    line-height: 38px;
+    border: 1px solid #333333;
+    float: left;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.btn_toggle:hover{
+        background-color:#fafafa;
+    }
+
+.btn_txt{
+    margin-right: 20px;
+}
+
+.btn_toggle{
+    width: 120px;
+    margin-right: 20px;
+}
+
+.contents{
+    height: calc(100% - 70px);
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 40px;
+    overflow: auto;
+}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+}
+
+.quizWrapper, .answer{
+    width: 980px;
+    margin:0 auto;
+}
+
+.hint{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    margin: 10px 0;
+    color: #777777;
+    font-weight: bold;
+}
+
+.quiz{
+    width: 100%;
+    margin-top: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 30px;
+}
+
+.answer{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 20px 10px 20px 30px;
+    height: auto;
+    overflow: hidden;
+}
+
+.ans>p{
+        font-size: 16px;
+        font-weight: bold;
+        margin:16px 0;
+        line-height: 30px;
+        color: #333333;
+    }
+
+.ans>h3{
+        margin:40px 10px 20px 10px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+.ans>textarea{
+        resize: none;
+        width: calc(100% - 60px);
+        overflow: hidden;
+        font-size: 17px;
+        font-weight: bold;
+        color:#444;
+        font-family: sans-serif;
+        line-height: 24px;
+        padding: 12px 24px;
+        -webkit-box-shadow: 2px 2px 2px #555555;
+                box-shadow: 2px 2px 2px #555555;
+    }
+
+.ans>textarea:focus{
+            outline:none;
+        }
+
+@media (min-width: 1800px) {
+    .wrapper::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .quizWrapper, .answer{
+        float: left;
+        width: 50%;
+    }
+    .contents{
+        overflow: hidden;
+    }
+    .answer{
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
+.q1_vBox1{
+        width: 100%;
+        height: 250px;
+    }
+
+.q2_vBox1{
+        width: 100%;
+        height: 500px;
+        background-color: grey;
+    }
+
+.q2_hBox2{
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+
+.q3_vBox1{
+        height: 250px;
+        width: 100%;
+    }
+
+.q3_hBox2{
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+
+.q4_vBox1{
+        height: 100px;
+        width: 100%;
+    }
+
+.q4_vBox2{
+        height: 400px;
+        width: 100%;
+    }
+
+.q4_hBox3{
+        float: left;
+        width: 20%;
+        height: 100%;
+    }
+
+.q4_hBox4{
+        float: left;
+        width: 60%;
+        height: 100%;
+    }
+
+.q5_hbox3{
+        float: left;
+        width: 20%;
+        height: 100%;
+    }
+
+.q6_vBox1{
+        height: 50%;
+        width: 100%;
+    }

@@ -1,6 +1,7 @@
 .curriculum{
     width: 100%;
     background-color: #f7f7f7;
+    margin-top: 70px;
 
     & .subtitle{
         margin-bottom: 12px;

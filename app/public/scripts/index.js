@@ -1,5 +1,4 @@
 let autoChange = true;
-
 $(".banner_arrow").click(function(){
     changeBanner();
     autoChange = false;
@@ -53,11 +52,11 @@ setInterval(function () {
 
 function changeComment(){
     $(".comment_nav_item").toggleClass("dot--on");
-    if($(".comment").eq(0).html() === "말은 쉽지, 코드를 보여줘"){
-        $(".comment_by").html("코알못 에디슨")
-        $(".comment_container").html('<p class="comment">좋은 프로그램은 1%의 영감과 99%의 노가다로 이루어진다</p><p class="comment">Good program is one percent inspiration and ninety-nine percent perspiration</p>');
+    if($(".comment").eq(0).html() === "12시간동안 수업이라 힘들 거라고 생각했는데"){
+        $(".comment_by").html("공간 디자이너 박ㅇㅇ님")
+        $(".comment_container").html('<p class="comment">한번에 개념을 익히고 이해하기에 좋았습니다.</p><p class="comment">처음 개념을 잡을 때 유용한 것 같고 팀 미션도 재밌었습니다!</p>');
     }else{
-        $(".comment_by").html("리누스 토르발스")
-        $(".comment_container").html('<p class="comment">말은 쉽지, 코드를 보여줘</p><p class="comment">Talk is cheap. Show me the code.</p>');
+        $(".comment_by").html("UX디자이너 김ㅇㅇ님")
+        $(".comment_container").html('<p class="comment">12시간동안 수업이라 힘들 거라고 생각했는데</p><p class="comment">생각보다 정말 시간도 빨리 가고 재미있었어요.</p>');
     }
 }

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
+    <script type="text/javascript">
+        if(screen.width<640){
+            location.href="https://m.onedaylearning.co.kr/index.html"
+        }
+    </script>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:type" content="website">
     <meta property="og:title" content="하루만에.웹">
     <meta property="og:description" content="웹 페이지 만들기, 정말 하루면 배울 수 있습니다. 지금 시작하세요!">
@@ -18,29 +21,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="hd">
-        <h1>
-            <a class="hd_logo" href="index.html" title="하루만에 웹 메인 페이지로 이동">
-                <img class="hd_logo_img" src="./assets/logo.svg" alt="하루만에 웹"/>
-            </a>
-        </h1>
-        <nav class="hd_nav">
-            <ul class="hd_nav_container">
-                <li><a class="hd_nav_item" href="difference.html">차별점</a></li>
-                <li><a class="hd_nav_item" href="curriculum.html">수업내용</a></li>
-                <li><a class="hd_nav_item" href="faq.html">자주하는 질문</a></li>
-                <li><a class="hd_nav_item" href="location.html">오시는 길</a></li>
-                <p class="hd_nav_apply">수강신청</p>
-            </ul>
-        </nav>
-    </header>
+    <div class="hd_wrapper">
+        <header class="hd">
+            <h1>
+                <a class="hd_logo" href="index.html" title="하루만에 웹 메인 페이지로 이동">
+                    <img class="hd_logo_img" src="./assets/logo.svg" alt="하루만에 웹"/>
+                </a>
+            </h1>
+            <nav class="hd_nav">
+                <ul class="hd_nav_container">
+                    <li><a class="hd_nav_item" href="difference.html">차별점</a></li>
+                    <li><a class="hd_nav_item" href="curriculum.html">수업내용</a></li>
+                    <li><a class="hd_nav_item" href="faq.html">자주하는 질문</a></li>
+                    <li><a class="hd_nav_item" href="location.html">오시는 길</a></li>
+                    <p class="hd_nav_apply">수강신청</p>
+                </ul>
+            </nav>
+        </header>
+    </div>
 
     <div class="banner">
         <img src="./assets/pictures/mainbanner1.jpg" alt="수업모습">
         <div class="upperTxt">
-            <p>1월 28일(일요일)</p>
-            <p>딱 하루 배워서 만드는</p>
-            <p>내 포트폴리오 사이트</p>
+            <a href="https://firebasestorage.googleapis.com/v0/b/oneday-917ef.appspot.com/o/ODL.zip?alt=media&token=c0a30d5b-5ab2-4b9b-845e-ef87922798e3" download><p>이 링크를 눌러 파일을 다운받아주세요</p></a>
         </div>
     </div>
     <div class="description_wrapper">
@@ -92,15 +95,18 @@
     <div class="comment_wrapper">
         <img src="./assets/word-front.svg"/>
         <div class="comment_container">
-            <p class="comment">말은 쉽지, 코드를 보여줘</p>
-            <p class="comment">Talk is cheap. Show me the code.</p>
+            <p class="comment">12시간동안 수업이라 힘들 거라고 생각했는데</p>
+            <p class="comment">생각보다 정말 시간도 빨리 가고 재미있었어요.</p>
         </div>
-        <p class="comment_by">리누스 토르발스</p>
+        <p class="comment_by">UX디자이너 김ㅇㅇ님</p>
         <img src="./assets/word-back.svg"/>
         <div class="comment_nav">
             <div class="comment_nav_item dot--on"></div>
             <div class="comment_nav_item"></div>
         </div>
+    </div>
+    <div class="faq_frame">
+        <img src="./assets/pictures/faq.jpg" alt="수업장 풍경">
     </div>
     <footer class="ft">
         <div class="ft_wrapper">

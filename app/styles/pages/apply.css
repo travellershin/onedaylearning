@@ -1,10 +1,10 @@
 .a_wrapper{
     width: 100%;
-    height: calc(100% - 252px);
     background-color: #f7f7f7;
     box-sizing: border-box;
     padding: 30px 0;
-    overflow: auto;
+    padding-top: 100px;
+    min-height: calc(100% - 180px);
 }
 .applyBox{
     width: 1024px;
@@ -70,21 +70,8 @@
         width: 439px;
         height: 400px;
         overflow: hidden;
-        border: solid 2px #102f80;
         box-sizing: border-box;
         float: left;
-
-        &_padding{
-            width: 395px;
-            height: 356px;
-            margin: 20px;
-            overflow: hidden;
-        }
-        & img{
-            width: 600px;
-            height: auto;
-            margin-left: -50px;
-        }
     }
 
     & .info{
@@ -109,7 +96,6 @@
 
         & .subTitle, .text{
             width: 60px;
-            height: 24px;
             font-size: 15px;
             line-height: 1.5;
             letter-spacing: -0.7px;
@@ -120,6 +106,12 @@
             &--applyNumber{
                 line-height: 40px !important;
             }
+        }
+
+        & .pinkPink{
+            color:#ed3995;
+            line-height: 32px;
+            font-size: 18px;
         }
 
         & .text{
@@ -194,9 +186,18 @@
         font-weight: bold;
     }
 
+    & .fullfillHint{
+        margin-top: 60px;
+        color: #ed3995;
+        font-size: 14px;
+        line-height: 24px;
+        height: 24px;
+        font-weight: bold;
+    }
+
     & .tabZone{
         width: 100%;
-        margin: 80px 0 32px 0;
+        margin: 20px 0 32px 0;
         padding-bottom: 20px;
         border-bottom: solid 1px #bebebe;
         overflow: hidden;
@@ -239,7 +240,7 @@
         border: solid 1px #bebebe;
         margin-top: 4px;
         font-size: 16px;
-        padding-left: 20px;
+        padding-left: 12px;
     }
 
     & .input--long{
@@ -433,12 +434,12 @@
 
     &>.couponCode{
         width: 300px;
-        height: 48px;
+        height: 36px;
         background-color: #ffffff;
         border: solid 1px #cdcdcd;
-        margin: 4px 0 0 30px;
+        margin: 10px 0 6px 30px;
         padding-left: 20px;
-        font-size: 28px;
+        font-size: 24px;
         letter-spacing: 1px;
     }
 
@@ -448,7 +449,7 @@
         font-size: 14px;
         line-height: 1.43;
         letter-spacing: -0.6px;
-        color: #102f80;
+        color: #ed3995;
         font-weight: bold;
         margin-bottom: 72px;
     }

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript">
+        if(screen.width<640){
+            location.href="https://m.onedaylearning.co.kr/class.html"
+        }
+    </script>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:type" content="website">
     <meta property="og:title" content="하루만에.웹">
     <meta property="og:description" content="웹 페이지 만들기, 정말 하루면 배울 수 있습니다. 지금 시작하세요!">
@@ -19,22 +22,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="hd">
-        <h1>
-            <a class="hd_logo" href="index.html" title="하루만에 웹 홈페이지로 이동">
-                <img class="hd_logo_img" src="./assets/logo.svg" alt="하루만에 웹"/>
-            </a>
-        </h1>
-        <nav class="hd_nav">
-            <ul class="hd_nav_container">
-                <li><a class="hd_nav_item" href="difference.html">차별점</a></li>
-                <li><a class="hd_nav_item hd_nav_item--active" href="curriculum.html">수업내용</a></li>
-                <li><a class="hd_nav_item" href="faq.html">자주하는 질문</a></li>
-                <li><a class="hd_nav_item" href="location.html">오시는 길</a></li>
-                <p class="hd_nav_apply">수강신청</p>
-            </ul>
-        </nav>
-    </header>
+    <div class="hd_wrapper">
+        <header class="hd">
+            <h1>
+                <a class="hd_logo" href="index.html" title="하루만에 웹 홈페이지로 이동">
+                    <img class="hd_logo_img" src="./assets/logo.svg" alt="하루만에 웹"/>
+                </a>
+            </h1>
+            <nav class="hd_nav">
+                <ul class="hd_nav_container">
+                    <li><a class="hd_nav_item" href="difference.html">차별점</a></li>
+                    <li><a class="hd_nav_item hd_nav_item--active" href="curriculum.html">수업내용</a></li>
+                    <li><a class="hd_nav_item" href="faq.html">자주하는 질문</a></li>
+                    <li><a class="hd_nav_item" href="location.html">오시는 길</a></li>
+                    <p class="hd_nav_apply">수강신청</p>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
 
     <article class="curriculum">
         <div class="bgWhite">
@@ -44,7 +50,7 @@
                     <img src="./assets/pictures/class-01.jpg" alt="수업 전경">
                     <p class="cardTitle">꼭 필요한 핵심을 가르치는 이론수업.</p>
                     <p class="cardTxt">웹의 기초, 개발도구 설치에서부터</p>
-                    <p class="cardTxt">HTML, CSS, Javascript의 핵심이론을 쉽게 배운다.</p>
+                    <p class="cardTxt">HTML, CSS, Javascript의 핵심이론을 쉽게 배웁니다.</p>
                 </div>
                 <div class="card">
                     <img src="./assets/pictures/class-02.jpg" alt="1:1 튜터링 모습">
@@ -63,7 +69,6 @@
 
 
         <h2 class="subtitle">수업 스케줄 및 수업 내용</h2>
-        <p class="curriculum_description">단 하루의 강의지만, '웹이란 무엇인가?'에서부터 실제 인터넷에 사이트를 올려 동작하게 하는 것 까지</p>
         <p class="curriculum_description">웹서비스의 전 과정을 배울 수 있도록 내용을 구성했습니다.</p>
         <div class="curriculum_container">
             <section class="curriculum_part">
@@ -227,6 +232,6 @@
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     <script src="./scripts/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./scripts/modules/apply.js"></script>
+    <script src="./scripts/modules/toast.js"></script>
 </body>
 </html>

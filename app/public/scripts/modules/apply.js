@@ -1,3 +1,9 @@
+if(window.localStorage["pushApplyBtn"] === "true"){
+    window.localStorage["pushApplyBtn"] = "false";
+    $("html").animate({
+          scrollTop: $(".course_wrapper").offset().top
+    }, 180);
+}
 
 $(".ICA_submit").click(function(){
     submitPreApply();
@@ -12,6 +18,7 @@ $(".PAC_close").click(function(){
     $(".ICA").removeClass("displayNone");
 })
 $(".hd_nav_apply").click(function(){
+    console.log(location.href)
     $("html").animate({
           scrollTop: $(".course_wrapper").offset().top
     }, 180);
@@ -51,14 +58,27 @@ var couponAdjustedBill = 0;
 var couponNo = "";
 
 $(".applyNumber").change(function(){
-    console.log(personInfoArray)
-    if($(this).val()<noPeople){
-        removePerson(noPeople - $(this).val())
-    }else if($(this).val()>noPeople){
-        addPerson($(this).val() - noPeople)
+    var idx = $(this).val();
+    if(idx<noPeople){
+        removePerson(noPeople - idx)
+    }else if(idx>noPeople){
+        addPerson(idx - noPeople)
     }
-    noPeople = $(this).val();
+    noPeople = idx;
     setInfoDom();
+    if(idx>1){
+        $(".fullfillHint").html("*인원 "+idx+"명의 정보를 모두 입력해주세요.");
+        $(".fullfillHint").removeClass("hide");
+    }else{
+        $(".fullfillHint").addClass("hide");
+    }
+    $(".d_peopleNo").html(idx+"명")
+    $(".beginPrice").html("1인당 128,000원(점심, 저녁, 간식 포함)<br><span class='pinkPink'>총 "+(128*idx)+",000원</span>")
+
+})
+
+$(".closeCouponPop").click(function(){
+    $(".lightbox").addClass("displayNone")
 })
 
 function addPerson(idx){
@@ -77,7 +97,6 @@ function addPerson(idx){
 
 function removePerson(idx){
     personInfoArray.splice(personInfoArray.length-1-idx,idx);
-    console.log(personInfoArray)
 }
 function setInfoDom(){
     var txt = ''
@@ -240,11 +259,21 @@ function checkInfo(){
 
     for (var i = 0; i < personInfoArray.length; i++) {
         if(personInfoArray[i].name.length<1){
-            toast("참가자의 이름은 필수 정보입니다.");
+            $(".tab").removeClass("tab--selected");
+            $(".tab").eq(i).addClass("tab--selected");
+            toast((i+1)+"번 참가자의 이름이 잘못 입력되었습니다.");
+            for (var key in personInfoArray[i]) {
+                $("#"+key).val(personInfoArray[i][key]);
+            }
             return
         }
         if(!regPhone.test(personInfoArray[i].tel)){
-            toast("휴대폰 번호가 잘못 입력되었습니다.");
+            $(".tab").removeClass("tab--selected");
+            $(".tab").eq(i).addClass("tab--selected");
+            toast((i+1)+"번 참가자의 휴대폰 번호가 잘못 입력되었습니다.");
+            for (var key in personInfoArray[i]) {
+                $("#"+key).val(personInfoArray[i][key]);
+            }
             return
         }
     }

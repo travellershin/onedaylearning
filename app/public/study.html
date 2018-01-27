@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>공부공부</title>
+        <link rel="stylesheet" href="styless.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <p class="instruct">[1] 세로 두 영역으로 구분되는 레이아웃을 구성해보세요</p>
+            <p class="instruct hidden">[2] 가로 두 영역으로 구분되는 레이아웃을 구성해보세요</p>
+            <p class="instruct hidden">[3] 아래와 같이 3개 영역으로 구분되는 레이아웃을 구성해보세요</p>
+            <p class="instruct hidden">[4] Holy Grail이라고 불리는 레이아웃을 구성해보세요.</p>
+            <p class="instruct hidden">[5] 이전 문제에서, 상단만 가로 영역 5개로 쪼개 보세요</p>
+            <p class="instruct hidden">[6] 이전 문제에서, 우측 노란 사이드바를 세로 2개 영역으로 쪼개 보세요</p>
+            <p class="leftQ hidden">이전 문제</p>
+            <p class="rightQ">다음 문제</p>
+        </div>
+        <div class="contents">
+            <div class="wrapper">
+                <div class="quizWrapper">
+                    <p class="hint">레이아웃 구성시, 가장 먼저 세로 줄 숫자만큼 div 태그를 입력합니다.</p>
+                    <div class="quiz">
+                        <div class="q1_vBox1 blue">
+
+                        </div>
+                        <div class="q1_vBox1 red">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="answer">
+                    <div class="remote">
+                        <p class="btn_toggle">해설 보이기</p>
+                    </div>
+                    <div class="ans hidden">
+                        <p>1. 세로 두 줄로 이루어져 있기 때문에 HTML에서 두 개의 div태그 (A1), (A2)를 만듭니다.</p>
+                        <p>2. CSS에서 레이아웃을 위한 스타일링은 필요하지 않습니다. 너비 높이만 입력하면 됩니다.</p>
+<h3>HTML</h3>
+<textarea spellcheck="false"><div class="A1"></div>
+<div class="A2"></div></textarea>
+<h3>CSS</h3>
+<textarea spellcheck="false">.A1{
+    width: 500px;
+    height: 120px;
+    background-color: #4DABF7;
+}
+.A2{
+    width: 500px;
+    height: 120px;
+    background-color: #FF8787;
+}</textarea>
+                    </div>
+
+                </div>
+            </div>
+            <div class="wrapper hidden">
+                <div class="quizWrapper">
+                    <p class="hint">레이아웃 구성시, 가장 먼저 세로 줄 숫자만큼 div 태그를 입력합니다.</p>
+                    <p class="hint">아래와 같은 경우는 세로 한 줄로 구성되어 있고, 그 한 줄 안에서 가로로 분할되어 있습니다.</p>
+                    <div class="quiz">
+                        <div class="q2_vBox1">
+                            <div class="q2_hBox2 clearfix blue"></div>
+                            <div class="q2_hBox2 red"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="answer">
+                    <div class="remote">
+                        <p class="btn_toggle">해설 보이기</p>
+                    </div>
+                    <div class="ans hidden">
+                        <p>1. 세로 한 줄로 이루어져 있기 때문에 하나의 div태그 (A)를 만듭니다.</p>
+                        <p>2. (A)내부가 2개의 가로 영역으로 이루어져 있기 때문에 (A)안에 두 개의 div태그 (B1), (B2)를 넣습니다.</p>
+                        <p>3. 가로로 배치할 (B1), (B2)에 CSS에서 float:left 속성을 부여합니다.</p>
+                        <p>4. (B1), (B2)를 감싸고 있는 (A)에 HTML에서 clearfix 클래스를 부여합니다.</p>
+
+<h3>HTML</h3>
+<textarea spellcheck="false"><div class="A clearfix">
+    <div class="B1"></div>
+    <div class="B2"></div>
+</div></textarea>
+<h3>CSS</h3>
+<textarea spellcheck="false">
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.A{
+    width: 500px;
+    height: 240px;
+}
+.B1{
+    background-color: #4DABF7;
+    width: 250px;
+    height: 240px;
+    float:left;
+}
+.B2{
+    background-color: #FF8787;
+    width: 250px;
+    height: 240px;
+    float:left;
+}</textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="wrapper hidden">
+                <div class="quizWrapper">
+                    <p class="hint">레이아웃 구성시, 가장 먼저 세로 줄 숫자만큼 div 태그를 입력합니다.</p>
+                    <p class="hint">세로 두 줄로 이루어져 있고 두 번째 줄은 가로로 분할되어 있네요</p>
+                    <p class="hint">감싸는 div에는 clearfix클래스를, 가로로 배치될 div에는 float 속성을 부여해야 합니다.</p>
+
+                    <div class="quiz">
+                        <div class="q3_vBox1 navy">
+
+                        </div>
+                        <div class="q3_vBox1 clearfix">
+                            <div class="q3_hBox2 red"></div>
+                            <div class="q3_hBox2 blue"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="answer">
+                    <div class="remote">
+                        <p class="btn_toggle">해설 보이기</p>
+                    </div>
+                    <div class="ans hidden">
+                        <p>1. 세로 두 줄로 이루어져 있기 때문에 두 개의 div태그 (A1), (A2)를 입력합니다.</p>
+                        <p>2. (A2) 내부가 2개의 가로 영역으로 이루어져 있기 때문에 (A2)안에 두 개의 div태그 (B1), (B2)를 입력합니다.</p>
+                        <p>3. 가로로 배치할 (B1), (B2)에 float:left 속성을 부여합니다.</p>
+                        <p>4. float속성이 입력된 div태그들을 감싸고 있는 (A2)에 clearfix 클래스를 부여합니다.</p>
+<h3>HTML</h3>
+<textarea spellcheck="false"><div class="A1"></div>
+<div class="A2 clearfix">
+    <div class="B B1"></div>
+    <div class="B B2"></div>
+</div></textarea>
+<h3>CSS</h3>
+<textarea spellcheck="false">
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.A1{
+    width: 500px;
+    height: 120px;
+}
+.A2{
+    width: 500px;
+    height: 120px;
+    background-color: #95A5A6;
+}
+.B{
+    width: 250px;
+    height: 120px;
+    float:left;
+}
+.B1{
+    background-color: #4DABF7;
+}
+.B2{
+    background-color: #FF8787;
+}</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper hidden">
+                <div class="quizWrapper">
+                    <p class="hint">세로로 3줄입니다. 두 번재 줄은 가로로 3개 div가 들어가면 되겠네요. 3번 문제와 크게 다르지 않습니다.</p>
+
+                    <div class="quiz">
+                        <div class="q4_vBox1 navy">
+
+                        </div>
+                        <div class="q4_vBox2 clearfix">
+                            <div class="q4_hBox3 red"></div>
+                            <div class="q4_hBox4 blue"></div>
+                            <div class="q4_hBox3 yello"></div>
+                        </div>
+                        <div class="q4_vBox1 green">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="answer">
+                    <div class="remote">
+                        <p class="btn_toggle">해설 보이기</p>
+                    </div>
+                    <div class="ans hidden">
+                        <p>1. 세로 세 줄로 이루어져 있기 때문에 세 개의 div태그(A1), (B), (A2)를 입력합니다.</p>
+                        <p>2. 두 번째 세로줄인 (B)안에 세 개의 div태그 (C1), (D), (C2)를 입력합니다.</p>
+                        <p>3. 가로로 배치할 (C1), (D), (C2)에 float:left 속성을 부여합니다.</p>
+                        <p>4. float속성이 입력된 div태그들을 감싸고 있는 (B)에 clearfix 클래스를 부여합니다.</p>
+<h3>HTML</h3>
+<textarea spellcheck="false"><div class="A A1"></div>
+<div class="B clearfix">
+    <div class="C C1"></div>
+    <div class="D"></div>
+    <div class="C C2"></div>
+</div>
+<div class="A A2"></div></textarea>
+<h3>CSS</h3>
+<textarea spellcheck="false">
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.A{
+    width: 500px;
+    height: 100px;
+}
+.A1{
+    background-color: #95A5A6;
+}
+.A2{
+    background-color: #69DB7C;
+}
+.B{
+    width: 500px;
+    height: 200px;
+}
+.C{
+    float: left;
+    width: 100px;
+    height: 200px;
+}
+.D{
+    float: left;
+    width: 300px;
+    height: 200px;
+    background-color: #FF8787;
+}
+.C1{
+    background-color: #4DABF7;
+}
+.C2{
+    background-color: #FFD43B;
+}</textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="wrapper hidden">
+                <div class="quizWrapper">
+                    <div class="quiz">
+                        <div class="q4_vBox1">
+                            <div class="q5_hbox3 navy1"></div>
+                            <div class="q5_hbox3 navy2"></div>
+                            <div class="q5_hbox3 navy3"></div>
+                            <div class="q5_hbox3 navy4"></div>
+                            <div class="q5_hbox3 navy5"></div>
+                        </div>
+                        <div class="q4_vBox2">
+                            <div class="q4_hBox3 red"></div>
+                            <div class="q4_hBox4 blue"></div>
+                            <div class="q4_hBox3 yello"></div>
+                        </div>
+                        <div class="q4_vBox1 green"></div>
+                    </div>
+                </div>
+
+
+                <div class="answer">
+                    <div class="remote">
+                        <p class="btn_toggle">해설 보이기</p>
+                    </div>
+                    <div class="ans hidden">
+                        <p>1. 최상단 div (A)에 clearfix 클래스를 부여합니다.</p>
+                        <p>2. 그 안에 5개의 div (E1~E5)를 넣고, float:left 속성을 부여합니다.</p>
+
+<h3>HTML</h3>
+<textarea spellcheck="false"><div class="A clearfix">
+    <div class="E E1"></div>
+    <div class="E E2"></div>
+    <div class="E E3"></div>
+    <div class="E E4"></div>
+    <div class="E E5"></div>
+</div>
+<div class="B clearfix">
+    <div class="C C1"></div>
+    <div class="D"></div>
+    <div class="C C2"></div>
+</div>
+<div class="A A2"></div></textarea>
+<h3>CSS</h3>
+<textarea spellcheck="false">
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.A{
+    width: 500px;
+    height: 100px;
+}
+.E{
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+.E1{
+    background-color: #c3fae8;
+}
+.E2{
+    background-color: #63e6be;
+}
+.E3{
+    background-color: #20c997;
+}
+.E4{
+    background-color: #0ca678;
+}
+.E5{
+    background-color: #087f5b;
+}
+.A2{
+    background-color: #69DB7C;
+}
+.B{
+    width: 500px;
+    height: 200px;
+}
+.C{
+    float: left;
+    width: 100px;
+    height: 200px;
+}
+.D{
+    float: left;
+    width: 300px;
+    height: 200px;
+    background-color: #FF8787;
+}
+.C1{
+    background-color: #4DABF7;
+}
+.C2{
+    background-color: #FFD43B;
+}</textarea>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper hidden">
+                <div class="quizWrapper">
+                    <div class="quiz">
+                        <div class="q4_vBox1">
+                            <div class="q5_hbox3 navy1"></div>
+                            <div class="q5_hbox3 navy2"></div>
+                            <div class="q5_hbox3 navy3"></div>
+                            <div class="q5_hbox3 navy4"></div>
+                            <div class="q5_hbox3 navy5"></div>
+                        </div>
+                        <div class="q4_vBox2">
+                            <div class="q4_hBox3 red"></div>
+                            <div class="q4_hBox4 blue"></div>
+                            <div class="q4_hBox3">
+                                <div class="q6_vBox1 yello2"></div>
+                                <div class="q6_vBox1 yello3"></div>
+                            </div>
+                        </div>
+                        <div class="q4_vBox1 green"></div>
+                    </div>
+                </div>
+
+
+                <div class="answer">
+                    <div class="remote">
+                        <p class="btn_toggle">해설 보이기</p>
+                    </div>
+                    <div class="ans hidden">
+                        <p>1. 노란색 div (두번째 C) 안에 2개의 div (F1, F2)를 넣습니다.</p>
+                        <p>2. 안에 들어가는 div는 세로로 배치되기 때문에, 따로 레이아웃 작업을 할 필요가 없습니다.</p>
+
+<h3>HTML</h3>
+<textarea spellcheck="false"><div class="A clearfix">
+    <div class="E E1"></div>
+    <div class="E E2"></div>
+    <div class="E E3"></div>
+    <div class="E E4"></div>
+    <div class="E E5"></div>
+</div>
+<div class="B clearfix">
+    <div class="C C1"></div>
+    <div class="D"></div>
+    <div class="C">
+        <div class="F F1"></div>
+        <div class="F F2"></div>
+    </div>
+</div>
+<div class="A A2"></div></textarea>
+<h3>CSS</h3>
+<textarea spellcheck="false">
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.A{
+    width: 500px;
+    height: 100px;
+}
+.E{
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+.E1{
+    background-color: #c3fae8;
+}
+.E2{
+    background-color: #63e6be;
+}
+.E3{
+    background-color: #20c997;
+}
+.E4{
+    background-color: #0ca678;
+}
+.E5{
+    background-color: #087f5b;
+}
+.A2{
+    background-color: #69DB7C;
+}
+.B{
+    width: 500px;
+    height: 200px;
+}
+.C{
+    float: left;
+    width: 100px;
+    height: 200px;
+}
+.F{
+    width: 100px;
+    height: 100px;
+}
+.F1{
+    background-color: #ffe066;
+}
+.F2{
+    background-color: #fcc419;
+}
+.D{
+    float: left;
+    width: 300px;
+    height: 200px;
+    background-color: #FF8787;
+}
+.C1{
+    background-color: #4DABF7;
+}
+.C2{
+    background-color: #FFD43B;
+}</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+
+    </body>
+</html>

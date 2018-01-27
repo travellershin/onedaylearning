@@ -10,3 +10,8 @@ function toast(txt){
         $(".snackbar").removeClass("show")
     }, 3000);
 }
+
+$(".hd_nav_apply").click(function(){
+    window.localStorage["pushApplyBtn"] = "true"
+    location.href = "index.html"
+})
