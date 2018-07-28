@@ -128,7 +128,7 @@ h1,h2,h3,h4,h5,h6,p{
 .dot--on{
     background-image: url("./assets/dot-on.svg") !important;
 }
-.lightbox, .lightbox_pre{
+.lightbox, .lightbox_pre, .lightbox_finish{
     position: fixed;
     top:0;
     left: 0;
@@ -146,21 +146,21 @@ h1,h2,h3,h4,h5,h6,p{
             align-items: center;
     z-index: 9999;
 }
-.lightbox_wrapper,.lightbox_pre_wrapper{
+.lightbox_wrapper,.lightbox_pre_wrapper,.lightbox_finish_wrapper{
         width: 90%;
         height: 90%;
     }
-.lightbox_footnote,.lightbox_pre_footnote{
+.lightbox_footnote,.lightbox_pre_footnote,.lightbox_finish_footnote{
         color: #fafafa;
         width: 100%;
         text-align: center;
         margin-top: 30px;
     }
-.lightbox_img,.lightbox_pre_img{
+.lightbox_img,.lightbox_pre_img,.lightbox_finish_img{
         width: 100%;
         height: auto;
     }
-.lightbox_img_cutter,.lightbox_pre_img_cutter{
+.lightbox_img_cutter,.lightbox_pre_img_cutter,.lightbox_finish_img_cutter{
             height: calc(100% - 60px);
             overflow: hidden;
         }
@@ -419,6 +419,24 @@ However, delay the fade out process for 2.5 seconds */
         font-weight: bold;
         cursor: pointer;
     }
+.five{
+    position: absolute;
+    top: 39px;
+    left: 36px;
+    background-color: white;
+    width: 104px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.datedate{
+    position: absolute;
+    top: 72px;
+    left: 36px;
+    background-color: white;
+    width: 240px;
+    font-size: 30px;
+    font-weight: bold;
+}
 .banner{
     width:100%;
     height: 440px;
@@ -1495,3 +1513,54 @@ However, delay the fade out process for 2.5 seconds */
         margin-left: 28px;
         cursor: pointer;
     }
+.lightbox_march{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 9999;
+}
+.mp{
+    width: 440px;
+    height: 490px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    margin-left: -220px;
+    top: 50%;
+    margin-top: -250px;
+    padding-top: 40px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+}
+.mp_title{
+        width: 100%;
+        height: 36px;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 22px;
+    }
+.mp_body{
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+.mp_close{
+        width: 320px;
+        height: 60px;
+        border: solid 3px #102f80;
+        margin: 40px 57px;
+        text-align: center;
+        line-height: 60px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+.pinkPink{
+    color: #ED3995;
+}

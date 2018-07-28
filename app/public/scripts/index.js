@@ -1,4 +1,30 @@
 let autoChange = true;
+let applied = [];
+let isFull = false;
+
+firebase.database().ref("apply/2018-05-05").once("value", snap => {
+    let db = snap.val();
+
+    for (var key in db) {
+        for (var i = 0; i < db[key].people.length; i++) {
+            applied.push(db[key].people[i])
+        }
+    }
+
+    if(applied.length>29){
+        isFull = true;
+        $(".lightbox_finish").removeClass("displayNone")
+    }
+
+})
+
+$(".course_apply").click(function(){
+    if(isFull){
+        $(".lightbox_finish").removeClass("displayNone")
+        return false;
+    }
+})
+
 $(".banner_arrow").click(function(){
     changeBanner();
     autoChange = false;

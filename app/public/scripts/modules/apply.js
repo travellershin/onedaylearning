@@ -18,10 +18,10 @@ $(".PAC_close").click(function(){
     $(".ICA").removeClass("displayNone");
 })
 $(".hd_nav_apply").click(function(){
-    console.log(location.href)
     $("html").animate({
           scrollTop: $(".course_wrapper").offset().top
     }, 180);
+    toast("아직 5월 수업 수강신청 기간이 아닙니다");
 })
 $(".regZone>input").keyup(function(){
     isFormFilled = false;

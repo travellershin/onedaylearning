@@ -1,0 +1,53 @@
+.lightbox_march{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 9999;
+}
+.mp{
+    width: 440px;
+    height: 490px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    margin-left: -220px;
+    top: 50%;
+    margin-top: -250px;
+    padding-top: 40px;
+    box-sizing: border-box;
+    text-align: center;
+
+    &_title{
+        width: 100%;
+        height: 36px;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 22px;
+    }
+    &_body{
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    &_close{
+        width: 320px;
+        height: 60px;
+        border: solid 3px #102f80;
+        margin: 40px 57px;
+        text-align: center;
+        line-height: 60px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+.pinkPink{
+    color: #ED3995;
+}

@@ -45,7 +45,7 @@ h1,h2,h3,h4,h5,h6,p{
     background-image: url("./assets/dot-on.svg") !important;
 }
 
-.lightbox, .lightbox_pre{
+.lightbox, .lightbox_pre, .lightbox_finish{
     position: fixed;
     top:0;
     left: 0;
